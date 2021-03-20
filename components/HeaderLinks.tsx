@@ -6,7 +6,7 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 // eslint-disable-next-line import/no-named-as-default
 import Icon from "@mdi/react";
-import { mdiGithub } from "@mdi/js";
+import { mdiForumOutline, mdiGithub } from "@mdi/js";
 
 import useStyles from "assets/jss/components/headerLinks";
 
@@ -15,6 +15,23 @@ function HeaderLinks(): ReactElement {
   const theme = useTheme();
   return (
     <List className={classes.list}>
+      <ListItem className={classes.listItem}>
+        <Tooltip
+          title="Discussions/Help"
+          classes={{ tooltip: classes.tooltip }}>
+          <Button
+            variant="text"
+            className={classes.navLink}
+            href="https://github.com/timmo001/system-bridge/discussions"
+            target="_blank">
+            <Icon
+              color={theme.palette.text.primary}
+              path={mdiForumOutline}
+              size={1}
+            />
+          </Button>
+        </Tooltip>
+      </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip title="GitHub" classes={{ tooltip: classes.tooltip }}>
           <Button
