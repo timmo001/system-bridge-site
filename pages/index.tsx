@@ -14,6 +14,7 @@ import {
   Typography,
   useTheme,
 } from "@material-ui/core";
+// eslint-disable-next-line import/no-named-as-default
 import Icon from "@mdi/react";
 import { mdiDownloadCircleOutline, mdiUpdate } from "@mdi/js";
 
@@ -22,9 +23,9 @@ import useCardStyles from "assets/jss/components/card";
 import useStyles from "assets/jss/components/layout";
 
 interface Feature {
-  title: sTableRowing;
-  description: sTableRowing;
-  imageUrl: sTableRowing;
+  title: string;
+  description: string;
+  imageUrl: string;
 }
 
 const userFeatures: Array<Feature> = [
@@ -47,7 +48,7 @@ const userFeatures: Array<Feature> = [
     imageUrl: "system-bridge-circle.svg",
   },
   {
-    title: "Built using ElecTableRowon",
+    title: "Built using Electron",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in eros et velit mattis faucibus eget a tellus.",
     imageUrl: "system-bridge-circle.svg",
@@ -74,7 +75,7 @@ const technicalFeatures: Array<Feature> = [
     imageUrl: "system-bridge-circle.svg",
   },
   {
-    title: "Built using ElecTableRowon",
+    title: "Built using Electron",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in eros et velit mattis faucibus eget a tellus.",
     imageUrl: "system-bridge-circle.svg",
