@@ -24,10 +24,7 @@ export async function getServerSideProps({
   const data: PageType[] = [];
   data.push({ path: "/", updated: "2020-11-08T00:00:00.000Z" });
 
-  const sitemap = generateSitemap(
-    data,
-    "https://system-bridge.timmo.dev"
-  );
+  const sitemap = generateSitemap(data, "https://system-bridge.timmo.dev");
 
   res.setHeader("Content-Type", "text/xml");
   res.write(sitemap);
