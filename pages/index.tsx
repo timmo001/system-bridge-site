@@ -9,7 +9,13 @@ import {
 } from "@material-ui/core";
 // eslint-disable-next-line import/no-named-as-default
 import Icon from "@mdi/react";
-import { mdiDownloadCircleOutline, mdiUpdate } from "@mdi/js";
+import {
+  mdiCogs,
+  mdiDesktopTowerMonitor,
+  mdiDownloadCircleOutline,
+  mdiInformationOutline,
+  mdiUpdate,
+} from "@mdi/js";
 
 import Layout from "components/Layout";
 import useStyles from "assets/jss/components/layout";
@@ -22,21 +28,21 @@ interface Feature {
 
 const userFeatures: Array<Feature> = [
   {
-    title: "Cross-Platform",
-    description: "Compatible with Windows, Mac and Linux.",
-    icon: mdiDownloadCircleOutline,
-  },
-  {
     title: "System Information",
     description:
       "Access your system's Audio, Battery, Bluetooth, CPU, Filesystems, Graphics, Memory, Networking, OS, and Process information via the API.",
-    icon: mdiDownloadCircleOutline,
+    icon: mdiInformationOutline,
   },
   {
-    title: "Commands",
+    title: "Send Commands",
     description:
       "Automate your system by sending a command or opening a URL or path via the API.",
-    icon: mdiDownloadCircleOutline,
+    icon: mdiCogs,
+  },
+  {
+    title: "Cross-Platform",
+    description: "Compatible with Windows, Mac and Linux.",
+    icon: mdiDesktopTowerMonitor,
   },
 ];
 
@@ -199,12 +205,12 @@ function Home(): ReactElement {
                 color={theme.palette.text.primary}
                 path={mdiDownloadCircleOutline}
                 size={12}
-                title="Download & Install"
+                title="Download"
               />
             </Grid>
             <Grid item>
               <Typography component="h4" variant="h5" gutterBottom>
-                Download & Install
+                Download
               </Typography>
               <Typography
                 className={classes.gridText}
@@ -227,7 +233,7 @@ function Home(): ReactElement {
                 color={theme.palette.text.primary}
                 path={mdiUpdate}
                 size={12}
-                title="Download & Install"
+                title="Download"
               />
             </Grid>
             <Grid item>
@@ -240,8 +246,8 @@ function Home(): ReactElement {
                 component="p"
                 variant="body1">
                 The application will automatically update whenever a new version
-                is released in this repository. You can also download the latest
-                version manually from{" "}
+                is released. You can also download the latest version manually
+                from{" "}
                 <a
                   href="https://github.com/timmo001/system-bridge/releases"
                   target="_blank">
