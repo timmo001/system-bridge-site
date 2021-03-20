@@ -62,6 +62,9 @@ const layoutStyle = makeStyles((theme: Theme) => ({
     marginTop: theme.spacing(2),
   },
   flex: { flex: 1 },
+  gridItem: {
+    textAlign: "center",
+  },
   gridText: {
     width: 420,
   },

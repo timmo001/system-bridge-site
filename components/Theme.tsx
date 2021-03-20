@@ -47,7 +47,7 @@ let theme = createMuiTheme({
         fontSize: "3.25rem",
       },
       h3: {
-        marginTop: 124,
+        marginTop: 64,
       },
     },
   },
