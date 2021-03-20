@@ -16,13 +16,13 @@ function Home(): ReactElement {
     <Layout
       classes={classes}
       title="Home"
-      url="https://material-frontend-template.timmo.dev"
-      description="A Frontend Template written using Material UI Next.js/React in TypeScript.">
+      url="https://system-bridge.timmo.dev"
+      description="The System Bridge website, written using Material UI Next.js/React in TypeScript.">
       <Container className={classes.main} component="article" maxWidth="xl">
         <Card>
           <CardContent>
-            <Typography color="textPrimary" component="div">
-              <Markdown source="## Frontend" escapeHtml={false} />
+            <Typography color="textPrimary" component="h3" variant="h4">
+              Lorem Ipsum
             </Typography>
           </CardContent>
         </Card>

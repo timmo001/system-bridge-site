@@ -1,11 +1,19 @@
 import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
-import { teal, indigo } from "@material-ui/core/colors";
+import { deepPurple, grey } from "@material-ui/core/colors";
 
 let theme = createMuiTheme({
   palette: {
     type: "dark",
-    primary: teal,
-    secondary: indigo,
+    primary: {
+      dark: deepPurple[800],
+      main: deepPurple[700],
+      light: deepPurple[600],
+    },
+    secondary: deepPurple,
+    background: {
+      default: grey[900],
+      paper: "#292929",
+    },
     contrastThreshold: 3,
     tonalOffset: 0.2,
   },

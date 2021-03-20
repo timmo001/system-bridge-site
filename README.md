@@ -1,9 +1,9 @@
-# Material Frontend Template
+# System Bridge
 
-A Frontend Template, written using Material UI Next.js/React in TypeScript.
+The System Bridge website, written using Material UI Next.js/React in TypeScript.
 
-## Demo
+## Site
 
-The demo for this template is available [here][demo]
+The site is available [here][site].
 
-[demo]: https://material-frontend-template.timmo.dev
+[site]: https://system-bridge.timmo.dev

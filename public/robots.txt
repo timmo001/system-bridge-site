@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://material-frontend-template.timmo.dev/sitemap.xml
+Sitemap: https://system-bridge.timmo.dev/sitemap.xml
