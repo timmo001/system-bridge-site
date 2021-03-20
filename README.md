@@ -1,4 +1,4 @@
-# System Bridge Template
+# System Bridge
 
 The System Bridge website, written using Material UI Next.js/React in TypeScript.
 
