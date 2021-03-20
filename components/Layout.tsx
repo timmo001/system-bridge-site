@@ -9,6 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import Header from "./Header";
 import HeaderLinks from "./HeaderLinks";
 import Markdown from "./Markdown";
+import Parallax from "./Parallax";
 
 interface LayoutProps {
   children?: ReactElement | ReactElement[];
@@ -59,12 +60,24 @@ function Layout(props: LayoutProps): ReactElement {
         fixed
         rightLinks={<HeaderLinks />}
       />
+      <Parallax small image={"header.svg"} />
       {props.children}
       <Container className={classes.footer} component="footer" maxWidth="xl">
         <Card>
           <CardContent>
-            <Typography component="div">
-              <Markdown source="Copyright © Owner" escapeHtml={false} />
+            <Typography component="div" variant="subtitle1">
+              Website source avaliable on{" "}
+              <a
+                href="https://github.com/timmo001/system-bridge-site"
+                target="_blank">
+                GitHub
+              </a>
+              .
+              <br />
+              Copyright ©{" "}
+              <a href="https://timmo.dev" target="_blank">
+                Aidan Timson
+              </a>
             </Typography>
           </CardContent>
         </Card>

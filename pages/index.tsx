@@ -21,8 +21,8 @@ function Home(): ReactElement {
       <Container className={classes.main} component="article" maxWidth="xl">
         <Card>
           <CardContent>
-            <Typography color="textPrimary" component="h1" variant="h3">
-              System Bridge
+            <Typography color="textPrimary" component="h3" variant="h4">
+              Lorem Ipsum
             </Typography>
           </CardContent>
         </Card>
