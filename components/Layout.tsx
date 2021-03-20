@@ -50,7 +50,6 @@ function Layout(props: LayoutProps): ReactElement {
       </Head>
       <Header
         {...props}
-        brand="System Bridge"
         changeColorOnScroll={{
           height: 200,
           color: "primary",

@@ -23,7 +23,6 @@ interface ChangeColorOnScroll {
 
 interface HeaderProps {
   absolute?: string;
-  brand?: string;
   changeColorOnScroll?: ChangeColorOnScroll;
   color?: ColorExpanded;
   fixed?: boolean;
@@ -69,7 +68,7 @@ function Header(props: HeaderProps): ReactElement {
     }
   };
 
-  const { color, rightLinks, brand, fixed, absolute } = props;
+  const { color, rightLinks, fixed, absolute } = props;
   return (
     <AppBar
       className={clsx({
@@ -83,11 +82,8 @@ function Header(props: HeaderProps): ReactElement {
         <Toolbar className={classes.container}>
           <Link href="/">
             <Button>
-              <Typography
-                className={classes.title}
-                component="div"
-                variant="h4">
-                {brand}
+              <Typography className={classes.title} component="h1" variant="h4">
+                System Bridge
               </Typography>
             </Button>
           </Link>

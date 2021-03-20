@@ -8,7 +8,7 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 // eslint-disable-next-line import/no-named-as-default
 import Icon from "@mdi/react";
-import { mdiInformation } from "@mdi/js";
+import { mdiGithub } from "@mdi/js";
 
 import useStyles from "assets/jss/components/headerLinks";
 
@@ -33,8 +33,8 @@ function HeaderLinks(): ReactElement {
             href="https://github.com/timmo001/system-bridge"
             target="_blank">
             <Icon
-              path={mdiInformation}
               color={theme.palette.text.primary}
+              path={mdiGithub}
               size={1}
             />
           </Button>

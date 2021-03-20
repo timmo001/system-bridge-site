@@ -25,7 +25,7 @@ const layoutStyle = makeStyles((theme: Theme) => ({
   },
   main: {
     position: "relative",
-    marginTop: -24,
+    marginTop: 48,
   },
   navWrapper: {
     margin: "20px auto 50px auto",

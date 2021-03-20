@@ -41,6 +41,15 @@ let theme = createMuiTheme({
         justifyContent: "flex-end",
       },
     },
+    MuiTypography: {
+      h3: {
+        textAlign: "center",
+        fontSize: "3.25rem",
+      },
+      h4: {
+        marginTop: 64,
+      },
+    },
   },
 });
 theme = responsiveFontSizes(theme);
