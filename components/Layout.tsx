@@ -8,7 +8,6 @@ import Typography from "@material-ui/core/Typography";
 
 import Header from "./Header";
 import HeaderLinks from "./HeaderLinks";
-import Markdown from "./Markdown";
 import Parallax from "./Parallax";
 
 interface LayoutProps {
