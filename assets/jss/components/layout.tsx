@@ -62,6 +62,9 @@ const layoutStyle = makeStyles((theme: Theme) => ({
     marginTop: theme.spacing(2),
   },
   flex: { flex: 1 },
+  gridText: {
+    width: 420,
+  },
 }));
 
 export default layoutStyle;

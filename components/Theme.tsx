@@ -42,12 +42,12 @@ let theme = createMuiTheme({
       },
     },
     MuiTypography: {
-      h3: {
+      h2: {
         textAlign: "center",
         fontSize: "3.25rem",
       },
-      h4: {
-        marginTop: 64,
+      h3: {
+        marginTop: 124,
       },
     },
   },

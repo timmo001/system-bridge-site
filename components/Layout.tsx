@@ -1,7 +1,6 @@
 import React, { ReactElement } from "react";
 import Head from "next/head";
 import { ClassNameMap } from "@material-ui/styles";
-import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
@@ -61,24 +60,22 @@ function Layout(props: LayoutProps): ReactElement {
       <Parallax small image={"header.svg"} />
       {props.children}
       <Container className={classes.footer} component="footer" maxWidth="xl">
-        <Card>
-          <CardContent>
-            <Typography component="div" variant="subtitle1">
-              Website source avaliable on{" "}
-              <a
-                href="https://github.com/timmo001/system-bridge-site"
-                target="_blank">
-                GitHub
-              </a>
-              .
-              <br />
-              Copyright ©{" "}
-              <a href="https://timmo.dev" target="_blank">
-                Aidan Timson
-              </a>
-            </Typography>
-          </CardContent>
-        </Card>
+        <CardContent>
+          <Typography component="div" variant="subtitle1">
+            Website source avaliable on{" "}
+            <a
+              href="https://github.com/timmo001/system-bridge-site"
+              target="_blank">
+              GitHub
+            </a>
+            .
+            <br />
+            Copyright ©{" "}
+            <a href="https://timmo.dev" target="_blank">
+              Aidan Timson
+            </a>
+          </Typography>
+        </CardContent>
       </Container>
     </>
   );
