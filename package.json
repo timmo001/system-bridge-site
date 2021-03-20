@@ -1,0 +1,42 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "eslint": "eslint --ext .ts --ext .tsx --color ./",
+    "start:dev": "next dev",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@material-ui/core": "4.11.3",
+    "@material-ui/icons": "4.11.2",
+    "@material-ui/lab": "4.0.0-alpha.57",
+    "@material-ui/styles": "4.11.3",
+    "@mdi/js": "5.9.55",
+    "@mdi/react": "1.4.0",
+    "clsx": "1.1.1",
+    "fontsource-roboto": "4.0.0",
+    "moment": "2.29.1",
+    "next": "10.0.9",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-markdown": "5.0.3",
+    "react-moment": "1.1.1",
+    "react-syntax-highlighter": "15.4.3"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "14.14.35",
+    "@types/react": "17.0.3",
+    "@types/react-syntax-highlighter": "13.5.0",
+    "@typescript-eslint/eslint-plugin": "4.18.0",
+    "@typescript-eslint/parser": "4.18.0",
+    "eslint": "7.22.0",
+    "eslint-import-resolver-typescript": "2.4.0",
+    "eslint-plugin-import": "2.22.1",
+    "globby": "11.0.2",
+    "prettier": "2.2.1",
+    "typescript": "4.2.3"
+  }
+}

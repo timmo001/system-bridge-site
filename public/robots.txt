@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://material-frontend-template.timmo.dev/sitemap.xml
