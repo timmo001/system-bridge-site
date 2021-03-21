@@ -58,11 +58,6 @@ export const apiFeatures: Array<Feature> = [
     icon: mdiBluetoothConnect,
   },
   {
-    title: "Command",
-    description: "Run a command.",
-    icon: mdiCogs,
-  },
-  {
     title: "CPU",
     description: "CPU usage, clock speed, and configuration.",
     icon: mdiCpu64Bit,
@@ -88,11 +83,6 @@ export const apiFeatures: Array<Feature> = [
     icon: mdiNetwork,
   },
   {
-    title: "Open",
-    description: "Open a URL or file using the default application.",
-    icon: mdiFileDocument,
-  },
-  {
     title: "Processes",
     description: "Show proccess information.",
     icon: mdiApplicationCog,
@@ -101,5 +91,18 @@ export const apiFeatures: Array<Feature> = [
     title: "System",
     description: "Get system informaiton.",
     icon: mdiDesktopTower,
+  },
+];
+
+export const apiCommandFeatures: Array<Feature> = [
+  {
+    title: "Command",
+    description: "Run a command.",
+    icon: mdiCogs,
+  },
+  {
+    title: "Open",
+    description: "Open a URL or file using the default application.",
+    icon: mdiFileDocument,
   },
 ];
