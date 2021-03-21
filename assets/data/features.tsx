@@ -8,6 +8,7 @@ import {
   mdiDesktopTowerMonitor,
   mdiExpansionCard,
   mdiFileDocument,
+  mdiHarddisk,
   mdiInformationOutline,
   mdiMemory,
   mdiNetwork,
