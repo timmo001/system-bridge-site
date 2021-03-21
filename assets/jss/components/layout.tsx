@@ -66,7 +66,10 @@ const layoutStyle = makeStyles((theme: Theme) => ({
     textAlign: "center",
   },
   gridText: {
-    width: 420,
+    width: 380,
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+    },
   },
 }));
 

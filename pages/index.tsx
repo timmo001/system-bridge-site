@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import { GetStaticProps } from "next";
 import {
+  CardActionArea,
   CardContent,
   Container,
   Grid,
@@ -13,7 +14,9 @@ import {
   mdiCogs,
   mdiDesktopTowerMonitor,
   mdiDownloadCircleOutline,
+  mdiForumOutline,
   mdiInformationOutline,
+  mdiNotebookEditOutline,
   mdiUpdate,
 } from "@mdi/js";
 
@@ -117,6 +120,7 @@ function Home(): ReactElement {
         <Typography color="textPrimary" component="h2" variant="h2">
           A bridge for your systems
         </Typography>
+
         <Typography component="h3" variant="h3" gutterBottom>
           Features
         </Typography>
@@ -132,8 +136,7 @@ function Home(): ReactElement {
                 className={classes.gridItem}
                 item
                 xl={4}
-                lg={6}
-                md={8}
+                md={6}
                 xs={12}>
                 <Icon
                   color={theme.palette.text.primary}
@@ -156,6 +159,7 @@ function Home(): ReactElement {
             )
           )}
         </Grid>
+
         <Typography component="h3" variant="h3" gutterBottom>
           API Endpoints
         </Typography>
@@ -171,8 +175,7 @@ function Home(): ReactElement {
                 className={classes.gridItem}
                 item
                 xl={4}
-                lg={6}
-                md={8}
+                md={6}
                 xs={12}>
                 <Icon
                   color={theme.palette.text.primary}
@@ -195,69 +198,156 @@ function Home(): ReactElement {
             )
           )}
         </Grid>
+
         <Typography component="h3" variant="h3" gutterBottom>
           Getting Started
         </Typography>
-        <CardContent>
-          <Grid container direction="row" alignItems="center" justify="center">
-            <Grid item>
-              <Icon
-                color={theme.palette.text.primary}
-                path={mdiDownloadCircleOutline}
-                size={12}
-                title="Download"
-              />
-            </Grid>
-            <Grid item>
-              <Typography component="h4" variant="h5" gutterBottom>
-                Download
-              </Typography>
-              <Typography
-                className={classes.gridText}
-                color="textPrimary"
-                component="p"
-                variant="body1">
-                You can download the latest version of the application{" "}
-                <a
-                  href="https://github.com/timmo001/system-bridge/releases"
-                  target="_blank">
-                  here
-                </a>
-                .
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid container direction="row" alignItems="center" justify="center">
-            <Grid item>
-              <Icon
-                color={theme.palette.text.primary}
-                path={mdiUpdate}
-                size={12}
-                title="Download"
-              />
-            </Grid>
-            <Grid item>
-              <Typography component="h4" variant="h5" gutterBottom>
-                Updates
-              </Typography>
-              <Typography
-                className={classes.gridText}
-                color="textPrimary"
-                component="p"
-                variant="body1">
-                The application will automatically update whenever a new version
-                is released. You can also download the latest version manually
-                from{" "}
-                <a
-                  href="https://github.com/timmo001/system-bridge/releases"
-                  target="_blank">
-                  here
-                </a>
-                .
-              </Typography>
-            </Grid>
-          </Grid>
-        </CardContent>
+        <a
+          href="https://github.com/timmo001/system-bridge/releases"
+          target="_blank">
+          <CardContent>
+            <CardActionArea>
+              <Grid
+                container
+                direction="row"
+                alignItems="center"
+                justify="space-evenly">
+                <Grid item>
+                  <Icon
+                    color={theme.palette.text.primary}
+                    path={mdiDownloadCircleOutline}
+                    size={12}
+                    title="Download"
+                  />
+                </Grid>
+                <Grid item>
+                  <Typography component="h4" variant="h5" gutterBottom>
+                    Download
+                  </Typography>
+                  <Typography
+                    className={classes.gridText}
+                    color="textPrimary"
+                    component="p"
+                    variant="body1">
+                    You can download the latest version of the application here.
+                  </Typography>
+                </Grid>
+              </Grid>
+            </CardActionArea>
+          </CardContent>
+        </a>
+        <a
+          href="https://github.com/timmo001/system-bridge/releases"
+          target="_blank">
+          <CardContent>
+            <CardActionArea>
+              <Grid
+                container
+                direction="row"
+                alignItems="center"
+                justify="space-evenly">
+                <Grid item>
+                  <Icon
+                    color={theme.palette.text.primary}
+                    path={mdiUpdate}
+                    size={12}
+                    title="Download"
+                  />
+                </Grid>
+                <Grid item>
+                  <Typography component="h4" variant="h5" gutterBottom>
+                    Updates
+                  </Typography>
+                  <Typography
+                    className={classes.gridText}
+                    color="textPrimary"
+                    component="p"
+                    variant="body1">
+                    The application will automatically update whenever a new
+                    version is released. You can also download the latest
+                    version manually from here.
+                  </Typography>
+                </Grid>
+              </Grid>
+            </CardActionArea>
+          </CardContent>
+        </a>
+
+        <Typography component="h3" variant="h3" gutterBottom>
+          Links / Resources
+        </Typography>
+        <a
+          href="https://github.com/timmo001/system-bridge/discussions"
+          target="_blank">
+          <CardContent>
+            <CardActionArea>
+              <Grid
+                container
+                direction="row"
+                alignItems="center"
+                justify="space-evenly">
+                <Grid item>
+                  <Icon
+                    color={theme.palette.text.primary}
+                    path={mdiForumOutline}
+                    size={12}
+                    title="Discussions"
+                  />
+                </Grid>
+                <Grid item>
+                  <Typography component="h4" variant="h5" gutterBottom>
+                    Discussions
+                  </Typography>
+                  <Typography
+                    className={classes.gridText}
+                    color="textPrimary"
+                    component="p"
+                    variant="body1">
+                    Participate in discussions and get help here.
+                  </Typography>
+                </Grid>
+              </Grid>
+            </CardActionArea>
+          </CardContent>
+        </a>
+        <a
+          href="https://github.com/timmo001/system-bridge/discussions"
+          target="_blank">
+          <CardContent>
+            <CardActionArea>
+              <Grid
+                container
+                direction="row"
+                alignItems="center"
+                justify="space-evenly">
+                <Grid item>
+                  <Icon
+                    color={theme.palette.text.primary}
+                    path={mdiNotebookEditOutline}
+                    size={12}
+                    title="Issues"
+                  />
+                </Grid>
+                <Grid item>
+                  <Typography component="h4" variant="h5" gutterBottom>
+                    Suggest a Feature / Report a Bug
+                  </Typography>
+                  <Typography
+                    className={classes.gridText}
+                    color="textPrimary"
+                    component="p"
+                    variant="body1">
+                    Thought of a feature that could be added?
+                    <br />
+                    Found an issue?
+                    <br />
+                    Suggest it here.
+                  </Typography>
+                </Grid>
+              </Grid>
+            </CardActionArea>
+          </CardContent>
+        </a>
       </Container>
     </Layout>
   );
