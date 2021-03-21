@@ -15,6 +15,7 @@ import {
   mdiDesktopTowerMonitor,
   mdiDownloadCircleOutline,
   mdiForumOutline,
+  mdiGithub,
   mdiInformationOutline,
   mdiNotebookEditOutline,
   mdiUpdate,
@@ -120,7 +121,6 @@ function Home(): ReactElement {
         <Typography color="textPrimary" component="h2" variant="h2">
           A bridge for your systems
         </Typography>
-
         <Typography component="h3" variant="h3" gutterBottom>
           Features
         </Typography>
@@ -159,7 +159,6 @@ function Home(): ReactElement {
             )
           )}
         </Grid>
-
         <Typography component="h3" variant="h3" gutterBottom>
           API Endpoints
         </Typography>
@@ -198,7 +197,6 @@ function Home(): ReactElement {
             )
           )}
         </Grid>
-
         <Typography component="h3" variant="h3" gutterBottom>
           Getting Started
         </Typography>
@@ -272,7 +270,6 @@ function Home(): ReactElement {
             </CardActionArea>
           </CardContent>
         </a>
-
         <Typography component="h3" variant="h3" gutterBottom>
           Links / Resources
         </Typography>
@@ -311,7 +308,7 @@ function Home(): ReactElement {
           </CardContent>
         </a>
         <a
-          href="https://github.com/timmo001/system-bridge/discussions"
+          href="https://github.com/timmo001/system-bridge/issues"
           target="_blank">
           <CardContent>
             <CardActionArea>
@@ -325,7 +322,7 @@ function Home(): ReactElement {
                     color={theme.palette.text.primary}
                     path={mdiNotebookEditOutline}
                     size={12}
-                    title="Issues"
+                    title="Suggest a Feature / Report a Bug"
                   />
                 </Grid>
                 <Grid item>
@@ -342,6 +339,38 @@ function Home(): ReactElement {
                     Found an issue?
                     <br />
                     Suggest it here.
+                  </Typography>
+                </Grid>
+              </Grid>
+            </CardActionArea>
+          </CardContent>
+        </a>
+        <a href="https://github.com/timmo001/system-bridge" target="_blank">
+          <CardContent>
+            <CardActionArea>
+              <Grid
+                container
+                direction="row"
+                alignItems="center"
+                justify="space-evenly">
+                <Grid item>
+                  <Icon
+                    color={theme.palette.text.primary}
+                    path={mdiGithub}
+                    size={12}
+                    title="GitHub"
+                  />
+                </Grid>
+                <Grid item>
+                  <Typography component="h4" variant="h5" gutterBottom>
+                    Source Code
+                  </Typography>
+                  <Typography
+                    className={classes.gridText}
+                    color="textPrimary"
+                    component="p"
+                    variant="body1">
+                    Want to make a change? Want to browse the source code? It's here.
                   </Typography>
                 </Grid>
               </Grid>
