@@ -11,13 +11,24 @@ import {
 // eslint-disable-next-line import/no-named-as-default
 import Icon from "@mdi/react";
 import {
+  mdiApplicationCog,
+  mdiBatteryCharging,
+  mdiBluetoothConnect,
   mdiCogs,
+  mdiCpu64Bit,
+  mdiDesktopTower,
   mdiDesktopTowerMonitor,
   mdiDownloadCircleOutline,
+  mdiExpansionCard,
+  mdiFileDocument,
   mdiForumOutline,
   mdiGithub,
+  mdiHarddisk,
   mdiInformationOutline,
+  mdiMemory,
+  mdiNetwork,
   mdiNotebookEditOutline,
+  mdiSpeakerMultiple,
   mdiUpdate,
 } from "@mdi/js";
 
@@ -53,58 +64,63 @@ const userFeatures: Array<Feature> = [
 const apiFeatures: Array<Feature> = [
   {
     title: "Audio",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: mdiDownloadCircleOutline,
+    description: "Audio devices and configuration.",
+    icon: mdiSpeakerMultiple,
   },
   {
     title: "Battery",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: mdiDownloadCircleOutline,
+    description: "Battery level, capacity and configuration.",
+    icon: mdiBatteryCharging,
   },
   {
     title: "Bluetooth",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: mdiDownloadCircleOutline,
+    description: "BLuetooth configuratoin and devices.",
+    icon: mdiBluetoothConnect,
   },
   {
     title: "Command",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: mdiDownloadCircleOutline,
+    description: "Run a command.",
+    icon: mdiCogs,
   },
   {
     title: "CPU",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: mdiDownloadCircleOutline,
+    description: "CPU usage, clock speed, and configuration.",
+    icon: mdiCpu64Bit,
   },
   {
     title: "Filesystem",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: mdiDownloadCircleOutline,
+    description: "Filesystems and Disk information.",
+    icon: mdiHarddisk,
   },
   {
     title: "Graphics",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: mdiDownloadCircleOutline,
+    description: "Graphics card usage and configuration.",
+    icon: mdiExpansionCard,
   },
   {
     title: "Memory",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: mdiDownloadCircleOutline,
+    description: "Memory usage and configuration.",
+    icon: mdiMemory,
   },
   {
     title: "Network",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: mdiDownloadCircleOutline,
+    description: "Networking information.",
+    icon: mdiNetwork,
+  },
+  {
+    title: "Open",
+    description: "Open a URL or file using the default application.",
+    icon: mdiFileDocument,
   },
   {
     title: "Processes",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: mdiDownloadCircleOutline,
+    description: "Show proccess information.",
+    icon: mdiApplicationCog,
   },
   {
     title: "System",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: mdiDownloadCircleOutline,
+    description: "Get system informaiton.",
+    icon: mdiDesktopTower,
   },
 ];
 
@@ -370,7 +386,8 @@ function Home(): ReactElement {
                     color="textPrimary"
                     component="p"
                     variant="body1">
-                    Want to make a change? Want to browse the source code? It's here.
+                    Want to make a change? Want to browse the source code? It's
+                    here.
                   </Typography>
                 </Grid>
               </Grid>
