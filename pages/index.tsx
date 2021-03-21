@@ -370,7 +370,8 @@ function Home(): ReactElement {
                     color="textPrimary"
                     component="p"
                     variant="body1">
-                    Want to make a change? Want to browse the source code? It's here.
+                    Want to make a change? Want to browse the source code? It's
+                    here.
                   </Typography>
                 </Grid>
               </Grid>
