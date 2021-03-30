@@ -29,10 +29,16 @@ export const userFeatures: Array<Feature> = [
     icon: mdiInformationOutline,
   },
   {
-    title: "Send Commands",
+    title: "Send Commands and Notifications",
     description:
-      "Automate your system by sending a command or opening a URL or path via the API.",
+      "Automate your system by sending a command, opening a URL or path, or sending system notifications via the API.",
     icon: mdiCogs,
+  },
+  {
+    title: "Audio Player and Controls",
+    description:
+      "Play music or sounds and change the volume of your device via the API.",
+    icon: mdiSpeakerMultiple,
   },
   {
     title: "Cross-Platform",
