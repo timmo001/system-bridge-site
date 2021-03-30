@@ -44,7 +44,7 @@ export const userFeatures: Array<Feature> = [
 export const apiFeatures: Array<Feature> = [
   {
     title: "Audio",
-    description: "Audio devices and configuration.",
+    description: "Play audio, change volume, and get information.",
     icon: mdiSpeakerMultiple,
   },
   {
