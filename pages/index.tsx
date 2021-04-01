@@ -20,11 +20,7 @@ import {
 
 import Layout from "components/Layout";
 import useStyles from "assets/jss/components/layout";
-import {
-  apiFeatures,
-  Feature,
-  userFeatures,
-} from "assets/data/features";
+import { apiFeatures, Feature, userFeatures } from "assets/data/features";
 
 function Home(): ReactElement {
   const classes = useStyles();
