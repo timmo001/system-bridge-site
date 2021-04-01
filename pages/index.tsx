@@ -21,7 +21,6 @@ import {
 import Layout from "components/Layout";
 import useStyles from "assets/jss/components/layout";
 import {
-  apiCommandFeatures,
   apiFeatures,
   Feature,
   userFeatures,
@@ -87,44 +86,6 @@ function Home(): ReactElement {
           alignItems="center"
           justify="space-around">
           {apiFeatures.map(
-            ({ title, description, icon }: Feature, key: number) => (
-              <Grid
-                key={key}
-                className={classes.gridItem}
-                item
-                xl={4}
-                md={6}
-                xs={12}>
-                <Icon
-                  color={theme.palette.text.primary}
-                  path={icon}
-                  size={12}
-                  title={title}
-                />
-                <CardContent>
-                  <Typography component="h2" variant="h4" gutterBottom>
-                    {title}
-                  </Typography>
-                  <Typography
-                    color="textSecondary"
-                    component="p"
-                    variant="subtitle1">
-                    {description}
-                  </Typography>
-                </CardContent>
-              </Grid>
-            )
-          )}
-        </Grid>
-        <Typography component="h4" variant="h4" gutterBottom>
-          Command Endpoints
-        </Typography>
-        <Grid
-          container
-          direction="row"
-          alignItems="center"
-          justify="space-around">
-          {apiCommandFeatures.map(
             ({ title, description, icon }: Feature, key: number) => (
               <Grid
                 key={key}
