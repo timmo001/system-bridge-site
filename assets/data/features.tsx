@@ -8,6 +8,7 @@ import {
   mdiDesktopTowerMonitor,
   mdiExpansionCard,
   mdiFileDocument,
+  mdiFilmstrip,
   mdiHarddisk,
   mdiInformationOutline,
   mdiMemory,
@@ -41,6 +42,11 @@ export const userFeatures: Array<Feature> = [
     icon: mdiSpeakerMultiple,
   },
   {
+    title: "Video Player",
+    description: "Play local or hosted videos on your device via the API.",
+    icon: mdiFilmstrip,
+  },
+  {
     title: "Cross-Platform",
     description: "Compatible with Windows, Mac and Linux.",
     icon: mdiDesktopTowerMonitor,
@@ -62,6 +68,11 @@ export const apiFeatures: Array<Feature> = [
     title: "Bluetooth",
     description: "BLuetooth configuratoin and devices.",
     icon: mdiBluetoothConnect,
+  },
+  {
+    title: "Command",
+    description: "Run a command.",
+    icon: mdiCogs,
   },
   {
     title: "CPU",
@@ -89,6 +100,11 @@ export const apiFeatures: Array<Feature> = [
     icon: mdiNetwork,
   },
   {
+    title: "Open",
+    description: "Open a URL or file using the default application.",
+    icon: mdiFileDocument,
+  },
+  {
     title: "Processes",
     description: "Show proccess information.",
     icon: mdiApplicationCog,
@@ -98,17 +114,11 @@ export const apiFeatures: Array<Feature> = [
     description: "Get system informaiton.",
     icon: mdiDesktopTower,
   },
+  {
+    title: "Video",
+    description: "Play videos and control playback.",
+    icon: mdiFilmstrip,
+  },
 ];
 
-export const apiCommandFeatures: Array<Feature> = [
-  {
-    title: "Command",
-    description: "Run a command.",
-    icon: mdiCogs,
-  },
-  {
-    title: "Open",
-    description: "Open a URL or file using the default application.",
-    icon: mdiFileDocument,
-  },
-];
+export const apiCommandFeatures: Array<Feature> = [];
