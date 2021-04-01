@@ -120,5 +120,3 @@ export const apiFeatures: Array<Feature> = [
     icon: mdiFilmstrip,
   },
 ];
-
-export const apiCommandFeatures: Array<Feature> = [];
