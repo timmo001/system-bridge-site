@@ -58,7 +58,7 @@ Gets audio and device information.
 
 Plays an audio file from a path or URL in a player.
 
-### Path
+### Example: Play Path
 
 Plays a track that is stored locally on the device.
 
@@ -86,7 +86,7 @@ Plays a track that is stored locally on the device.
 }
 ```
 
-### URL
+### Example: Play SFX from URL
 
 This plays a sound effect from a URL, but hides the player. This is ideal for
 playing a notification sound to the device.

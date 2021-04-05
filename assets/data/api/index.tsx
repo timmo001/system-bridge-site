@@ -16,6 +16,10 @@ import {
 
 import { GenericObject } from "components/Types";
 import mdAudio from "assets/data/api/services/audio.md";
+import mdBattery from "assets/data/api/services/battery.md";
+import mdBluetooth from "assets/data/api/services/bluetooth.md";
+import mdCommand from "assets/data/api/services/command.md";
+import mdCpu from "assets/data/api/services/cpu.md";
 
 export interface APIServiceDescription {
   title: string;
@@ -35,25 +39,25 @@ export const apiServices: GenericObject<APIServiceDescription> = {
     title: "Battery",
     icon: mdiBatteryCharging,
     description: "Battery level, capacity and configuration.",
-    docs: "",
+    docs: mdBattery,
   },
   bluetooth: {
     title: "Bluetooth",
     icon: mdiBluetoothConnect,
     description: "Bluetooth configuratoin and devices.",
-    docs: "",
+    docs: mdBluetooth,
   },
   command: {
     title: "Command",
     icon: mdiCogs,
     description: "Run a command.",
-    docs: "",
+    docs: mdCommand,
   },
   cpu: {
     title: "CPU",
     icon: mdiCpu64Bit,
     description: "CPU usage, clock speed, and configuration.",
-    docs: "",
+    docs: mdCpu,
   },
   filesystem: {
     title: "Filesystem",
