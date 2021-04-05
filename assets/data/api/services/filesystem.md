@@ -32,8 +32,8 @@ Gets filesystem information.
         }
     },
     "diskLayout": {
-        "SCSI\\DISK&amp;VEN_AB&amp;PROD_AB123456789-123456789\\5&amp;B1F1234&amp;0&amp;020000": {
-            "device": "SCSI\\DISK&amp;VEN_AB&amp;PROD_AB123456789-123456789\\5&amp;B1F1234&amp;0&amp;020000",
+        "SCSI\\DISK&amp;VEN_AB&amp;PROD_AB123456789-123456789": {
+            "device": "SCSI\\DISK&amp;VEN_AB&amp;PROD_AB123456789-123456789",
             "type": "HD",
             "name": "AB 123456789-123456789",
             "vendor": "(Standard disk drives)",

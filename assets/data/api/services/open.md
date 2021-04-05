@@ -25,6 +25,7 @@ Opens a picture in the default application for a PNG.
     "path": "I:\\Pictures\\Untitled2.png"
 }
 ```
+
 ### Example: Open a URL
 
 Opens a URL in the default browser.
