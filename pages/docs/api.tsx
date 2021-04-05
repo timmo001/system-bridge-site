@@ -1,14 +1,23 @@
 import React, { ReactElement } from "react";
 import { GetStaticProps } from "next";
-import { Container, Grid, Typography } from "@material-ui/core";
+import {
+  CardContent,
+  Container,
+  Grid,
+  Typography,
+  useTheme,
+} from "@material-ui/core";
 // eslint-disable-next-line import/no-named-as-default
-// import Icon from "@mdi/react";
+import Icon from "@mdi/react";
 
+import { APIServiceDescription, apiServices } from "assets/data/api/api";
 import Layout from "components/Layout";
 import useStyles from "assets/jss/components/layout";
+import Markdown from "components/Markdown";
 
 function API(): ReactElement {
   const classes = useStyles();
+  const theme = useTheme();
 
   return (
     <Layout
@@ -24,7 +33,50 @@ function API(): ReactElement {
           container
           direction="row"
           alignItems="flex-start"
-          justify="space-around"></Grid>
+          justify="space-around">
+          {apiServices.map(
+            (
+              { title, description, docs, icon }: APIServiceDescription,
+              key: number
+            ) => (
+              <CardContent key={key}>
+                <Grid
+                  container
+                  direction="row"
+                  alignItems="center"
+                  justify="space-evenly">
+                  <Grid item>
+                    <Icon
+                      color={theme.palette.text.primary}
+                      path={icon}
+                      size={12}
+                      title="Download"
+                    />
+                  </Grid>
+                  <Grid item>
+                    <Typography component="h4" variant="h5" gutterBottom>
+                      {title}
+                    </Typography>
+                    <Typography
+                      className={classes.gridText}
+                      color="textPrimary"
+                      component="p"
+                      variant="body1">
+                      {description}
+                    </Typography>
+                    <Typography
+                      className={classes.gridText}
+                      color="textPrimary"
+                      component="p"
+                      variant="body1">
+                      <Markdown escapeHtml source={docs} />
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </CardContent>
+            )
+          )}
+        </Grid>
       </Container>
     </Layout>
   );
