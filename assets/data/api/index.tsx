@@ -10,6 +10,7 @@ import {
   mdiFilmstrip,
   mdiHarddisk,
   mdiMemory,
+  mdiMonitor,
   mdiNetwork,
   mdiSpeakerMultiple,
 } from "@mdi/js";
@@ -58,6 +59,12 @@ export const apiServices: GenericObject<APIServiceDescription> = {
     icon: mdiCpu64Bit,
     description: "CPU usage, clock speed, and configuration.",
     docs: mdCpu,
+  },
+  display: {
+    title: "Display",
+    icon: mdiMonitor,
+    description: "Display information and brightness control.",
+    docs: "",
   },
   filesystem: {
     title: "Filesystem",
