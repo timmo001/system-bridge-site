@@ -5,8 +5,8 @@
   "scripts": {
     "build": "next build",
     "eslint": "eslint --ext .ts --ext .tsx --color ./",
-    "start:dev": "next dev",
-    "start": "next start"
+    "start:dev": "next dev -p 3020",
+    "start": "next start -p 3020"
   },
   "dependencies": {
     "@material-ui/core": "4.11.3",
