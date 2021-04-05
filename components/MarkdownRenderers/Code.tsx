@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 interface CodeProps {
   language: string;
@@ -9,7 +9,7 @@ interface CodeProps {
 
 function Code(props: CodeProps): ReactElement {
   return (
-    <SyntaxHighlighter language={props.language} style={shadesOfPurple}>
+    <SyntaxHighlighter language={props.language} style={atomOneDark}>
       {props.value}
     </SyntaxHighlighter>
   );
