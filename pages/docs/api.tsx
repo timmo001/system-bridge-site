@@ -21,6 +21,8 @@ import Markdown from "components/Markdown";
 
 interface StyledTabProps {
   label: string;
+  icon: ReactElement;
+  value: string;
 }
 
 const StyledTab = withStyles((theme: Theme) =>
