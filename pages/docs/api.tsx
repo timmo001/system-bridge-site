@@ -10,7 +10,7 @@ import {
 // eslint-disable-next-line import/no-named-as-default
 import Icon from "@mdi/react";
 
-import { APIServiceDescription, apiServices } from "assets/data/api/api";
+import { APIServiceDescription, apiServices } from "assets/data/api";
 import Layout from "components/Layout";
 import useStyles from "assets/jss/components/layout";
 import Markdown from "components/Markdown";
@@ -34,7 +34,7 @@ function API(): ReactElement {
           direction="row"
           alignItems="flex-start"
           justify="space-around">
-          {apiServices.map(
+          {Object.values(apiServices).map(
             (
               { title, description, docs, icon }: APIServiceDescription,
               key: number
