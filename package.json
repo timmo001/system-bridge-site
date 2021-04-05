@@ -5,8 +5,8 @@
   "scripts": {
     "build": "next build",
     "eslint": "eslint --ext .ts --ext .tsx --color ./",
-    "start:dev": "next dev",
-    "start": "next start"
+    "start:dev": "next dev -p 3020",
+    "start": "next start -p 3020"
   },
   "dependencies": {
     "@material-ui/core": "4.11.3",
@@ -37,6 +37,7 @@
     "eslint-plugin-import": "2.22.1",
     "globby": "11.0.3",
     "prettier": "2.2.1",
+    "raw-loader": "4.0.2",
     "typescript": "4.2.3"
   }
 }

@@ -6,8 +6,8 @@ import Image from "./MarkdownRenderers/Image";
 import Link from "./MarkdownRenderers/Link";
 
 interface MarkdownProps {
-  source: string;
   escapeHtml: boolean;
+  source: string;
 }
 
 function Markdown(props: MarkdownProps): ReactElement {

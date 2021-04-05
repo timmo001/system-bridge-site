@@ -57,7 +57,7 @@ function Layout(props: LayoutProps): ReactElement {
         fixed
         rightLinks={<HeaderLinks />}
       />
-      <Parallax small image={"header.svg"} />
+      <Parallax small image={"/header.svg"} />
       {props.children}
       <Container className={classes.footer} component="footer" maxWidth="xl">
         <CardContent>

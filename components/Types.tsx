@@ -8,3 +8,7 @@ export interface PageType {
   path: string;
   updated: string;
 }
+
+export interface GenericObject<T> {
+  [key: string]: T;
+}
