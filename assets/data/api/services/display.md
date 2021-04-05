@@ -1,5 +1,3 @@
-{% authentication_all %}
-
 ## GET
 
 Gets Display information. Brightness `-1` means your display is not supported or does not have a brightness value.

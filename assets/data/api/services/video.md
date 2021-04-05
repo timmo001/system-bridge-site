@@ -1,5 +1,3 @@
-{% authentication_all %}
-
 ## DELETE
 
 Stops any active media players.

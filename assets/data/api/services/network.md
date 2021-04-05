@@ -1,5 +1,3 @@
-{% authentication_all %}
-
 ## GET
 
 Gets networking information.

@@ -1,6 +1,4 @@
 
-{% authentication_all %}
-
 ## GET
 
 Gets battery information.

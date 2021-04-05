@@ -1,5 +1,3 @@
-{% authentication_all %}
-
 ## POST
 
 Sends a notification.

@@ -1,5 +1,3 @@
-{% authentication_all %}
-
 ## POST
 
 Opens a file or URL.

@@ -1,5 +1,3 @@
-{% authentication_all %}
-
 ## POST
 
 Runs a command.
