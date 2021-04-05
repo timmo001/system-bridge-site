@@ -136,7 +136,7 @@ Toggles the play state the active player.
 
 ### Stop
 
-Stops and closes the active player. Same effect as `DELETE /video`.
+Stops and closes the active player. Same as `DELETE /video`.
 
 #### Request
 

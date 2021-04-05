@@ -207,7 +207,7 @@ Toggles the play state the active player.
 
 ### Stop
 
-Stops and closes the active player. Same effect as `DELETE /audio`.
+Stops and closes the active player. Same as `DELETE /audio`.
 
 #### Request
 
