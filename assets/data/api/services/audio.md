@@ -2,6 +2,8 @@
 
 Stops any active media players.
 
+### Example
+
 #### Request
 
 `DELETE /audio`
@@ -19,6 +21,8 @@ Stops any active media players.
 ## GET
 
 Gets audio and device information.
+
+### Example
 
 #### Request
 

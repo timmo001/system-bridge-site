@@ -2,6 +2,8 @@
 
 Gets networking information.
 
+### Example
+
 #### Request
 
 `GET /network`

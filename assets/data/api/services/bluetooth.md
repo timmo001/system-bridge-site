@@ -2,6 +2,8 @@
 
 Gets bluetooth information.
 
+### Example
+
 #### Request
 
 `GET /bluetooth`

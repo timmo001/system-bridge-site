@@ -2,6 +2,8 @@
 
 Stops any active media players.
 
+### Example
+
 #### Request
 
 `DELETE /video`

@@ -2,6 +2,8 @@
 
 Gets CPU information.
 
+### Example
+
 #### Request
 
 `GET /cpu`

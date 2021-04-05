@@ -3,6 +3,8 @@
 
 Gets battery information.
 
+### Example
+
 #### Request
 
 `GET /battery`

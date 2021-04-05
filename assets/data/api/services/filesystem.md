@@ -2,6 +2,8 @@
 
 Gets filesystem information.
 
+### Example
+
 #### Request
 
 `GET /filesystem`

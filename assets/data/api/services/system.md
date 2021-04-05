@@ -2,6 +2,8 @@
 
 Gets system information.
 
+### Example
+
 #### Request
 
 `GET /system`

@@ -2,6 +2,8 @@
 
 Gets graphics information.
 
+### Example
+
 #### Request
 
 `GET /graphics`

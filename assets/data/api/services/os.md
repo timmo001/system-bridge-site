@@ -2,6 +2,8 @@
 
 Gets OS information.
 
+### Example
+
 #### Request
 
 `GET /os`

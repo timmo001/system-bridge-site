@@ -2,6 +2,8 @@
 
 Gets memory information.
 
+### Example
+
 #### Request
 
 `GET /memory`

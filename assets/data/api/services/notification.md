@@ -2,6 +2,8 @@
 
 Sends a notification.
 
+### Example
+
 #### Request
 
 `POST /notification`
