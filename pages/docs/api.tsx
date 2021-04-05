@@ -1,12 +1,6 @@
 import React, { ReactElement } from "react";
 import { GetStaticProps } from "next";
-import {
-  CardContent,
-  Container,
-  Grid,
-  Typography,
-  useTheme,
-} from "@material-ui/core";
+import { Container, Grid, Typography, useTheme } from "@material-ui/core";
 // eslint-disable-next-line import/no-named-as-default
 import Icon from "@mdi/react";
 
@@ -26,7 +20,7 @@ function API(): ReactElement {
       url="https://system-bridge.timmo.dev"
       description="A bridge for your systems.">
       <Container className={classes.main} component="article" maxWidth="lg">
-        <Typography component="h3" variant="h3" gutterBottom>
+        <Typography component="h1" variant="h2" gutterBottom>
           API Docs
         </Typography>
         <Grid
@@ -39,41 +33,34 @@ function API(): ReactElement {
               { title, description, docs, icon }: APIServiceDescription,
               key: number
             ) => (
-              <CardContent key={key}>
-                <Grid
-                  container
-                  direction="row"
-                  alignItems="center"
-                  justify="space-evenly">
-                  <Grid item>
-                    <Icon
-                      color={theme.palette.text.primary}
-                      path={icon}
-                      size={12}
-                      title="Download"
-                    />
-                  </Grid>
-                  <Grid item>
-                    <Typography component="h4" variant="h5" gutterBottom>
-                      {title}
-                    </Typography>
-                    <Typography
-                      className={classes.gridText}
-                      color="textPrimary"
-                      component="p"
-                      variant="body1">
-                      {description}
-                    </Typography>
-                    <Typography
-                      className={classes.gridText}
-                      color="textPrimary"
-                      component="p"
-                      variant="body1">
-                      <Markdown escapeHtml source={docs} />
-                    </Typography>
-                  </Grid>
+              <Grid
+                key={key}
+                container
+                direction="row"
+                alignItems="flex-start"
+                justify="space-evenly">
+                <Grid className={classes.name} item>
+                  <Icon
+                    color={theme.palette.text.primary}
+                    path={icon}
+                    size={12}
+                    title={title}
+                  />
                 </Grid>
-              </CardContent>
+                <Grid item xs>
+                  <Typography component="h2" variant="h3" gutterBottom>
+                    {title}
+                  </Typography>
+                  <Typography
+                    className={classes.gridText}
+                    color="textPrimary"
+                    component="p"
+                    variant="body1">
+                    {description}
+                  </Typography>
+                  <Markdown escapeHtml={false} source={docs} />
+                </Grid>
+              </Grid>
             )
           )}
         </Grid>

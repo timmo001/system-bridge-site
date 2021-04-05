@@ -15,6 +15,7 @@ import {
 } from "@mdi/js";
 
 import { GenericObject } from "components/Types";
+import mdAudio from "assets/data/api/services/audio.md";
 
 export interface APIServiceDescription {
   title: string;
@@ -28,7 +29,7 @@ export const apiServices: GenericObject<APIServiceDescription> = {
     title: "Audio",
     icon: mdiSpeakerMultiple,
     description: "Play audio, change volume, and get information.",
-    docs: "",
+    docs: mdAudio,
   },
   battery: {
     title: "Battery",
@@ -39,7 +40,7 @@ export const apiServices: GenericObject<APIServiceDescription> = {
   bluetooth: {
     title: "Bluetooth",
     icon: mdiBluetoothConnect,
-    description: "BLuetooth configuratoin and devices.",
+    description: "Bluetooth configuratoin and devices.",
     docs: "",
   },
   command: {
