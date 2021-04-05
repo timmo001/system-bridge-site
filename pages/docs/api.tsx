@@ -51,10 +51,9 @@ function API(): ReactElement {
     description,
     docs,
     icon,
-  }: APIServiceDescription = useMemo(() => {
-    console.log(apiServices, currentTab);
-    return apiServices[currentTab];
-  }, [currentTab]);
+  }: APIServiceDescription = useMemo(() => apiServices[currentTab], [
+    currentTab,
+  ]);
 
   const classes = useStyles();
   const theme = useTheme();
