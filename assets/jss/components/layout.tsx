@@ -71,6 +71,13 @@ const layoutStyle = makeStyles((theme: Theme) => ({
       width: "100%",
     },
   },
+  verticalTabs: {
+    borderRight: `1px solid ${theme.palette.divider}`,
+    marginTop: 80,
+  },
+  leftAlign: {
+    alignSelf: "flex-start",
+  },
 }));
 
 export default layoutStyle;

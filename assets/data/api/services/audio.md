@@ -38,7 +38,7 @@ Gets audio and device information.
     },
     "devices": [
         {
-            "id": "HDAUDIO\\FUNC_01&amp;VEN_10EC&amp;DEV_1000&amp;SUBSYS_100000&amp;REV_1000\\5&amp;10AB18A8&amp;0&amp;0001",
+            "id": "HDAUDIO\\FUNC_01",
             "name": "Realtek High Definition Audio",
             "manufacturer": "Realtek",
             "revision": null,
