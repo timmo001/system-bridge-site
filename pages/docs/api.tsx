@@ -74,7 +74,8 @@ function API(): ReactElement {
             container
             direction="row"
             alignItems="flex-start"
-            justify="flex-start">
+            justify="flex-start"
+            spacing={2}>
             <Grid item>
               <TabList
                 className={classes.verticalTabs}
