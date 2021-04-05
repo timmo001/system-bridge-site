@@ -21,6 +21,9 @@ import mdBattery from "assets/data/api/services/battery.md";
 import mdBluetooth from "assets/data/api/services/bluetooth.md";
 import mdCommand from "assets/data/api/services/command.md";
 import mdCpu from "assets/data/api/services/cpu.md";
+import mdDisplay from "assets/data/api/services/display.md";
+import mdFilesystem from "assets/data/api/services/filesystem.md";
+import mdGraphics from "assets/data/api/services/graphics.md";
 
 export interface APIServiceDescription {
   title: string;
@@ -64,19 +67,19 @@ export const apiServices: GenericObject<APIServiceDescription> = {
     title: "Display",
     icon: mdiMonitor,
     description: "Display information and brightness control.",
-    docs: "",
+    docs: mdDisplay,
   },
   filesystem: {
     title: "Filesystem",
     icon: mdiHarddisk,
     description: "Filesystems and Disk information.",
-    docs: "",
+    docs: mdFilesystem,
   },
   graphics: {
     title: "Graphics",
     icon: mdiExpansionCard,
     description: "Graphics card usage and configuration.",
-    docs: "",
+    docs: mdGraphics,
   },
   memory: {
     title: "Memory",
