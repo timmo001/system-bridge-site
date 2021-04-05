@@ -33,6 +33,7 @@ import mdOpen from "assets/data/api/services/open.md";
 import mdOs from "assets/data/api/services/os.md";
 import mdProcesses from "assets/data/api/services/processes.md";
 import mdSystem from "assets/data/api/services/system.md";
+import mdVideo from "assets/data/api/services/video.md";
 
 export interface APIServiceDescription {
   title: string;
@@ -136,6 +137,6 @@ export const apiServices: GenericObject<APIServiceDescription> = {
     title: "Video",
     icon: mdiFilmstrip,
     description: "Play videos and control playback.",
-    docs: "",
+    docs: mdVideo,
   },
 };
