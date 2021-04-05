@@ -1,5 +1,7 @@
 import React, { ReactElement } from "react";
+import Link from "next/link";
 import { useTheme } from "@material-ui/core/styles";
+import clsx from "clsx";
 import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -15,6 +17,15 @@ function HeaderLinks(): ReactElement {
   const theme = useTheme();
   return (
     <List className={classes.list}>
+      <ListItem className={classes.listItem}>
+        <Link href="/docs/api">
+          <Button variant="text" className={classes.navLink}>
+            <span className={classes.listItemText}>API Docs</span>
+          </Button>
+        </Link>
+      </ListItem>
+
+      <ListItem className={clsx(classes.listItem, classes.divider)} />
       <ListItem className={classes.listItem}>
         <Tooltip
           title="Suggest a Feature / Report a Bug"
