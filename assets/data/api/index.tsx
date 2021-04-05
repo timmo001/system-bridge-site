@@ -1,17 +1,19 @@
 import {
   mdiApplicationCog,
   mdiBatteryCharging,
+  mdiBell,
   mdiBluetoothConnect,
   mdiCogs,
   mdiCpu64Bit,
   mdiDesktopTower,
+  mdiDesktopTowerMonitor,
   mdiExpansionCard,
   mdiFileDocument,
   mdiFilmstrip,
   mdiHarddisk,
   mdiMemory,
   mdiMonitor,
-  mdiNetwork,
+  mdiNetworkOutline,
   mdiSpeakerMultiple,
 } from "@mdi/js";
 
@@ -24,6 +26,13 @@ import mdCpu from "assets/data/api/services/cpu.md";
 import mdDisplay from "assets/data/api/services/display.md";
 import mdFilesystem from "assets/data/api/services/filesystem.md";
 import mdGraphics from "assets/data/api/services/graphics.md";
+import mdMemory from "assets/data/api/services/memory.md";
+import mdNetwork from "assets/data/api/services/network.md";
+import mdNotification from "assets/data/api/services/notification.md";
+import mdOpen from "assets/data/api/services/open.md";
+import mdOs from "assets/data/api/services/os.md";
+import mdProcesses from "assets/data/api/services/processes.md";
+import mdSystem from "assets/data/api/services/system.md";
 
 export interface APIServiceDescription {
   title: string;
@@ -85,31 +94,43 @@ export const apiServices: GenericObject<APIServiceDescription> = {
     title: "Memory",
     icon: mdiMemory,
     description: "Memory usage and configuration.",
-    docs: "",
+    docs: mdMemory,
   },
   network: {
     title: "Network",
-    icon: mdiNetwork,
+    icon: mdiNetworkOutline,
     description: "Networking information.",
-    docs: "",
+    docs: mdNetwork,
+  },
+  notification: {
+    title: "Notification",
+    icon: mdiBell,
+    description: "Create a system notification.",
+    docs: mdNotification,
   },
   open: {
     title: "Open",
     icon: mdiFileDocument,
     description: "Open a URL or file using the default application.",
-    docs: "",
+    docs: mdOpen,
+  },
+  os: {
+    title: "Operating System",
+    icon: mdiDesktopTowerMonitor,
+    description: "Get OS information.",
+    docs: mdOs,
   },
   processes: {
     title: "Processes",
     icon: mdiApplicationCog,
     description: "Show proccess information.",
-    docs: "",
+    docs: mdProcesses,
   },
   system: {
     title: "System",
     icon: mdiDesktopTower,
     description: "Get system informaiton.",
-    docs: "",
+    docs: mdSystem,
   },
   video: {
     title: "Video",

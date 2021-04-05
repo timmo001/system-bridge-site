@@ -52,5 +52,6 @@ Runs a command.
     "command": "code",
     "arguments": [
         "/home/username/file.txt"
-    ]}
+    ]
+}
 ```
