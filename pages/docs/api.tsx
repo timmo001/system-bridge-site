@@ -65,8 +65,14 @@ function API(): ReactElement {
       url="https://system-bridge.timmo.dev"
       description="A bridge for your systems.">
       <Container className={classes.main} component="article" maxWidth="lg">
-        <Typography component="h1" variant="h2" gutterBottom>
+        <Typography component="h1" variant="h2">
           API Docs
+        </Typography>
+        <Typography color="textSecondary" component="h3" variant="subtitle1">
+          <Markdown
+            escapeHtml
+            source="All endpoints require an `api-key` header which can be generated and obtained from the app settings."
+          />
         </Typography>
         <TabContext value={currentTab}>
           <Grid

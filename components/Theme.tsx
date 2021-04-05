@@ -49,6 +49,9 @@ let theme = createMuiTheme({
       h3: {
         marginTop: 64,
       },
+      subtitle1: {
+        textAlign: "center",
+      },
     },
   },
 });
