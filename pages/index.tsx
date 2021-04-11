@@ -20,7 +20,13 @@ import {
 
 import Layout from "components/Layout";
 import useStyles from "assets/jss/components/layout";
-import { apiFeatures, Feature, userFeatures } from "assets/data/features";
+import {
+  apiFeatures,
+  apiFeaturesKeys,
+  Feature,
+  userFeatures,
+} from "assets/data/features";
+import Link from "next/link";
 
 function Home(): ReactElement {
   const classes = useStyles();
@@ -90,23 +96,31 @@ function Home(): ReactElement {
                 xl={4}
                 md={6}
                 xs={12}>
-                <Icon
-                  color={theme.palette.text.primary}
-                  path={icon}
-                  size={12}
-                  title={title}
-                />
-                <CardContent>
-                  <Typography component="h2" variant="h4" gutterBottom>
-                    {title}
-                  </Typography>
-                  <Typography
-                    color="textSecondary"
-                    component="p"
-                    variant="subtitle1">
-                    {description}
-                  </Typography>
-                </CardContent>
+                <Link
+                  href={{
+                    pathname: "/docs/api",
+                    query: { endpoint: apiFeaturesKeys[key] },
+                  }}>
+                  <CardActionArea>
+                    <Icon
+                      color={theme.palette.text.primary}
+                      path={icon}
+                      size={12}
+                      title={title}
+                    />
+                    <CardContent>
+                      <Typography component="h2" variant="h4" gutterBottom>
+                        {title}
+                      </Typography>
+                      <Typography
+                        color="textSecondary"
+                        component="p"
+                        variant="subtitle1">
+                        {description}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Link>
               </Grid>
             )
           )}

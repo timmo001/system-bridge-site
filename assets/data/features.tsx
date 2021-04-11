@@ -45,3 +45,4 @@ export const userFeatures: Array<Feature> = [
 ];
 
 export const apiFeatures: Array<Feature> = Object.values(apiServices);
+export const apiFeaturesKeys: Array<string> = Object.keys(apiServices);
