@@ -17,7 +17,7 @@ export const userFeatures: Array<Feature> = [
   {
     title: "System Information",
     description:
-      "Access your system's Audio, Battery, Bluetooth, CPU, Filesystems, Graphics, Memory, Networking, OS, and Process information via the API.",
+      "Access your system's Audio, Battery, Bluetooth, CPU, Display, Filesystems, Graphics, Memory, Media, Networking, OS, Process and System information via the API.",
     icon: mdiInformationOutline,
   },
   {

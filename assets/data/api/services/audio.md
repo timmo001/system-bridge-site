@@ -1,23 +1,3 @@
-## DELETE
-
-Stops any active media players.
-
-### Example
-
-#### Request
-
-`DELETE /audio`
-
-#### Response
-
-`200 OK`
-
-```json
-{
-    "successful": true
-}
-```
-
 ## GET
 
 Gets audio and device information.
@@ -56,72 +36,9 @@ Gets audio and device information.
 }
 ```
 
-## POST
-
-Plays an audio file from a path or URL in a player.
-
-### Example: Play Path
-
-Plays a track that is stored locally on the device.
-
-#### Request
-
-`POST /audio`
-
-```json
-{
-    "path": "I:\\Music\\My Amazing Track.flac",
-    "volume": 20
-}
-```
-
-#### Response
-
-`201 Created`
-
-```json
-{
-    "path": "I:\\Music\\My Amazing Track.flac",
-    "volume": 20,
-    "type": "audio",
-    "url": "/audio-7fd27c0b-ab95-4faa-9141-368d366b56d9"
-}
-```
-
-### Example: Play SFX from URL
-
-This plays a sound effect from a URL, but hides the player. This is ideal for
-playing a notification sound to the device.
-
-#### Request
-
-`POST /audio`
-
-```json
-{
-    "url": "https://example.com/sfx/doorbell.mp3",
-    "hidden": true,
-    "volume": 30
-}
-```
-
-#### Response
-
-`201 Created`
-
-```json
-{
-    "url": "/audio-2a388eaf-2f6a-4bd9-911e-88b76a4cfe38",
-    "hidden": true,
-    "volume": 30,
-    "path": "/tmp/audio-2a388eaf-2f6a-4bd9-911e-88b76a4cfe38",
-    "type": "audio"
-}
-```
-
 ## PUT
 
-Control player playback and system volume.
+Control system audio.
 
 ### Mute
 

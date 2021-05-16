@@ -26,6 +26,7 @@ import mdCpu from "assets/data/api/services/cpu.md";
 import mdDisplay from "assets/data/api/services/display.md";
 import mdFilesystem from "assets/data/api/services/filesystem.md";
 import mdGraphics from "assets/data/api/services/graphics.md";
+import mdMedia from "assets/data/api/services/media.md";
 import mdMemory from "assets/data/api/services/memory.md";
 import mdNetwork from "assets/data/api/services/network.md";
 import mdNotification from "assets/data/api/services/notification.md";
@@ -33,7 +34,6 @@ import mdOpen from "assets/data/api/services/open.md";
 import mdOs from "assets/data/api/services/os.md";
 import mdProcesses from "assets/data/api/services/processes.md";
 import mdSystem from "assets/data/api/services/system.md";
-import mdVideo from "assets/data/api/services/video.md";
 
 export interface APIServiceDescription {
   title: string;
@@ -91,6 +91,12 @@ export const apiServices: GenericObject<APIServiceDescription> = {
     description: "Graphics card usage and configuration.",
     docs: mdGraphics,
   },
+  media: {
+    title: "Media",
+    icon: mdiFilmstrip,
+    description: "Play media files and control playback.",
+    docs: mdMedia,
+  },
   memory: {
     title: "Memory",
     icon: mdiMemory,
@@ -132,11 +138,5 @@ export const apiServices: GenericObject<APIServiceDescription> = {
     icon: mdiDesktopTower,
     description: "Get system informaiton.",
     docs: mdSystem,
-  },
-  video: {
-    title: "Video",
-    icon: mdiFilmstrip,
-    description: "Play videos and control playback.",
-    docs: mdVideo,
   },
 };
