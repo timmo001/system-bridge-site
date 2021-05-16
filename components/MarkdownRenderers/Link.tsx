@@ -1,22 +1,24 @@
 import React, { ReactElement } from "react";
+import {
+  ReactBaseProps,
+  ReactMarkdownProps,
+} from "react-markdown/src/ast-to-react";
 
-interface LinkProps {
-  children: ReactElement;
-  href: string;
-}
-
-function Link(props: LinkProps): ReactElement {
+function Link({
+  children,
+  href,
+}: ReactBaseProps & ReactMarkdownProps): ReactElement {
   return (
     <a
-      href={props.href}
+      href={href as string}
       target={
-        props.href.startsWith(
+        String(href).startsWith(
           `${window.location.protocol}//${window.location.host}`
         )
           ? "_self"
           : "_blank"
       }>
-      {props.children}
+      {children}
     </a>
   );
 }

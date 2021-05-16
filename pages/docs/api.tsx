@@ -65,14 +65,10 @@ function API(): ReactElement {
     router.push({ query: { endpoint: value } }, null, { shallow: true });
   }
 
-  const {
-    title,
-    description,
-    docs,
-    icon,
-  }: APIServiceDescription = useMemo(() => apiServices[currentTab], [
-    currentTab,
-  ]);
+  const { title, description, docs, icon }: APIServiceDescription = useMemo(
+    () => apiServices[currentTab],
+    [currentTab]
+  );
 
   const classes = useStyles();
   const theme = useTheme();

@@ -13,10 +13,14 @@ interface MarkdownProps {
 function Markdown(props: MarkdownProps): ReactElement {
   return (
     <ReactMarkdown
-      source={props.source}
-      escapeHtml={props.escapeHtml}
-      renderers={{ code: Code, image: Image, link: Link }}
-    />
+      skipHtml={props.escapeHtml}
+      components={{
+        a: Link,
+        code: Code,
+        img: Image,
+      }}>
+      {props.source}
+    </ReactMarkdown>
   );
 }
 
