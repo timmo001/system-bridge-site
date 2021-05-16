@@ -24,7 +24,8 @@ Gets media player information.
 
 ### All
 
-Get current status of the media player and source information. This will return nothing if nothing is loaded.
+Get current status of the media player and source information.
+This will return nothing if nothing is loaded.
 
 #### Request
 
@@ -64,8 +65,8 @@ This will return a base64 representation of the image.
 
 `200 OK`
 
-```
-data...
+```text
+data:image/png;base64...
 ```
 
 ### Source
