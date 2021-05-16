@@ -1,13 +1,15 @@
 import React, { ReactElement } from "react";
+import {
+  ReactBaseProps,
+  ReactMarkdownProps,
+} from "react-markdown/src/ast-to-react";
 
 import ImageComponent from "../Image";
 
-interface ImageProps {
-  alt: string;
-  src: string;
-}
-
-function Image(props: ImageProps): ReactElement {
+function Image({
+  alt,
+  src,
+}: ReactBaseProps & ReactMarkdownProps): ReactElement {
   return (
     <ImageComponent
       hideCaption
@@ -15,8 +17,8 @@ function Image(props: ImageProps): ReactElement {
       hideTitle
       showAsImage
       media={{
-        alternativeText: props.alt,
-        url: props.src,
+        alternativeText: alt as string,
+        url: src as string,
       }}
     />
   );
