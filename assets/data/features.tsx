@@ -27,7 +27,7 @@ export const userFeatures: Array<Feature> = [
     icon: mdiCogs,
   },
   {
-    title: "Audio Player and Controls",
+    title: "Audio Player",
     description:
       "Play music or sounds and change the volume of your device via the API.",
     icon: mdiSpeakerMultiple,
