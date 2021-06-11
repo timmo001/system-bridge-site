@@ -2,7 +2,7 @@
 
 Gets system information.
 
-### Example
+### Example: Get All
 
 #### Request
 
@@ -74,3 +74,44 @@ Gets system information.
     }
 }
 ```
+
+### Example: Get Spotify
+
+You can add ?exact=true to find the exact match. This is useful when
+processes use similar names.
+
+#### Request
+
+`GET /processes/spotify.exe`
+
+`GET /processes/spotify.exe?exact=true`
+
+#### Response
+
+`200 OK`
+
+```json
+[
+    {
+        "pid": 9660,
+        "parentPid": 38700,
+        "name": "Spotify.exe",
+        "cpu": 0.0038981035726119244,
+        "cpuu": 0.0019490517863059622,
+        "cpus": 0.0019490517863059622,
+        "pmem": 0.7410063744646053,
+        "priority": 8,
+        "memVsz": 97600,
+        "memRss": 123816,
+        "nice": 0,
+        "started": "2021-04-05 11:10:10",
+        "state": "unknown",
+        "tty": "",
+        "user": "",
+        "command": "\"C:\\Users\\username\\AppData\\Roaming\\Spotify\\Spotify.exe\"",
+        "path": "C:\\Users\\username\\AppData\\Roaming\\Spotify\\Spotify.exe",
+        "params": ""
+    }
+]
+```
+
