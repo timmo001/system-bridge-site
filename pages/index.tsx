@@ -18,15 +18,16 @@ import {
   mdiUpdate,
 } from "@mdi/js";
 
-import Layout from "components/Layout";
-import useStyles from "assets/jss/components/layout";
 import {
   apiFeatures,
   apiFeaturesKeys,
   Feature,
   userFeatures,
 } from "assets/data/features";
+import Layout from "components/Layout";
 import Link from "next/link";
+import Markdown from "components/Markdown";
+import useStyles from "assets/jss/components/layout";
 
 function Home(): ReactElement {
   const classes = useStyles();
@@ -72,7 +73,7 @@ function Home(): ReactElement {
                     color="textSecondary"
                     component="p"
                     variant="subtitle1">
-                    {description}
+                    <Markdown escapeHtml={false} source={description} />
                   </Typography>
                 </CardContent>
               </Grid>

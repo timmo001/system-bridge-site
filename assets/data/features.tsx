@@ -2,6 +2,7 @@ import {
   mdiCogs,
   mdiDesktopTowerMonitor,
   mdiFilmstrip,
+  mdiHomeAssistant,
   mdiInformationOutline,
   mdiSpeakerMultiple,
 } from "@mdi/js";
@@ -41,6 +42,12 @@ export const userFeatures: Array<Feature> = [
     title: "Cross-Platform",
     description: "Compatible with Windows, Mac and Linux.",
     icon: mdiDesktopTowerMonitor,
+  },
+  {
+    title: "Integrated with Home Assistant",
+    description:
+      "Interact with your Bridges using [Home Assistant](https://www.home-assistant.io/integrations/system_bridge).",
+    icon: mdiHomeAssistant,
   },
 ];
 
