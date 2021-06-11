@@ -3,8 +3,8 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import { CssBaseline, ThemeProvider } from "@material-ui/core";
 
+import "@fontsource/roboto";
 import "assets/css/style.css";
-import "fontsource-roboto";
 import theme from "../components/Theme";
 
 function App({ Component, pageProps }: AppProps): ReactElement {
