@@ -11,6 +11,7 @@ import {
   mdiFileDocument,
   mdiFilmstrip,
   mdiHarddisk,
+  mdiKeyboard,
   mdiMemory,
   mdiMonitor,
   mdiNetworkOutline,
@@ -26,6 +27,7 @@ import mdCpu from "assets/data/api/services/cpu.md";
 import mdDisplay from "assets/data/api/services/display.md";
 import mdFilesystem from "assets/data/api/services/filesystem.md";
 import mdGraphics from "assets/data/api/services/graphics.md";
+import mdKeyboard from "assets/data/api/services/keyboard.md";
 import mdMedia from "assets/data/api/services/media.md";
 import mdMemory from "assets/data/api/services/memory.md";
 import mdNetwork from "assets/data/api/services/network.md";
@@ -90,6 +92,12 @@ export const apiServices: GenericObject<APIServiceDescription> = {
     icon: mdiExpansionCard,
     description: "Graphics card usage and configuration.",
     docs: mdGraphics,
+  },
+  keyboard: {
+    title: "Keyboard",
+    icon: mdiKeyboard,
+    description: "Sends a keyboard keypress.",
+    docs: mdKeyboard,
   },
   media: {
     title: "Media",
