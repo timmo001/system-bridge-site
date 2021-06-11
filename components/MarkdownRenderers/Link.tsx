@@ -13,7 +13,9 @@ function Link({
       href={href as string}
       target={
         String(href).startsWith(
-          `${window.location.protocol}//${window.location.host}`
+          `${global.window ? window.location.protocol : "http"}//${
+            global.window ? window.location.host : "localhost"
+          }`
         )
           ? "_self"
           : "_blank"
