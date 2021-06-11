@@ -1,6 +1,6 @@
 ## POST
 
-Sends a keyboard keypress.
+Sends keyboard key presses.
 
 [Supported Keys](http://robotjs.io/docs/syntax#keys)
 

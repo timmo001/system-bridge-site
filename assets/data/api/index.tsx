@@ -96,7 +96,7 @@ export const apiServices: GenericObject<APIServiceDescription> = {
   keyboard: {
     title: "Keyboard",
     icon: mdiKeyboard,
-    description: "Sends a keyboard keypress.",
+    description: "Sends keyboard key presses.",
     docs: mdKeyboard,
   },
   media: {
