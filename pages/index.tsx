@@ -11,11 +11,11 @@ import {
 // eslint-disable-next-line import/no-named-as-default
 import Icon from "@mdi/react";
 import {
+  mdiDownload,
   mdiDownloadCircleOutline,
   mdiForumOutline,
   mdiGithub,
   mdiNotebookEditOutline,
-  mdiUpdate,
 } from "@mdi/js";
 
 import {
@@ -177,24 +177,10 @@ function Home(): ReactElement {
                 <Grid item>
                   <Icon
                     color={theme.palette.text.primary}
-                    path={mdiUpdate}
+                    path={mdiDownload}
                     size={12}
                     title="Download"
                   />
-                </Grid>
-                <Grid item>
-                  <Typography component="h4" variant="h5" gutterBottom>
-                    Updates
-                  </Typography>
-                  <Typography
-                    className={classes.gridText}
-                    color="textPrimary"
-                    component="p"
-                    variant="body1">
-                    The application will automatically update whenever a new
-                    version is released. You can also download the latest
-                    version manually from here.
-                  </Typography>
                 </Grid>
               </Grid>
             </CardActionArea>
