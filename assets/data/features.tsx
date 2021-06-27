@@ -28,17 +28,6 @@ export const userFeatures: Array<Feature> = [
     icon: mdiCogs,
   },
   {
-    title: "Audio Player",
-    description:
-      "Play music or sounds and change the volume of your device via the API.",
-    icon: mdiSpeakerMultiple,
-  },
-  {
-    title: "Video Player",
-    description: "Play local or hosted videos on your device via the API.",
-    icon: mdiFilmstrip,
-  },
-  {
     title: "Cross-Platform",
     description: "Compatible with Windows, Mac and Linux.",
     icon: mdiDesktopTowerMonitor,
