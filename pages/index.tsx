@@ -11,7 +11,6 @@ import {
 // eslint-disable-next-line import/no-named-as-default
 import Icon from "@mdi/react";
 import {
-  mdiDownload,
   mdiDownloadCircleOutline,
   mdiForumOutline,
   mdiGithub,
@@ -159,28 +158,6 @@ function Home(): ReactElement {
                     variant="body1">
                     You can download the latest version of the application here.
                   </Typography>
-                </Grid>
-              </Grid>
-            </CardActionArea>
-          </CardContent>
-        </a>
-        <a
-          href="https://github.com/timmo001/system-bridge/releases"
-          target="_blank">
-          <CardContent>
-            <CardActionArea>
-              <Grid
-                container
-                direction="row"
-                alignItems="center"
-                justify="space-evenly">
-                <Grid item>
-                  <Icon
-                    color={theme.palette.text.primary}
-                    path={mdiDownload}
-                    size={12}
-                    title="Download"
-                  />
                 </Grid>
               </Grid>
             </CardActionArea>
