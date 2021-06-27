@@ -1,4 +1,5 @@
 import {
+  mdiBell,
   mdiCogs,
   mdiDesktopTowerMonitor,
   mdiHomeAssistant,
@@ -20,10 +21,15 @@ export const userFeatures: Array<Feature> = [
     icon: mdiInformationOutline,
   },
   {
-    title: "Send Commands and Notifications",
+    title: "Send Commands and Open files and URLs",
     description:
-      "Automate your system by sending a command, opening a URL or path, or sending system notifications via the API.",
+      "Automate your system by sending a command or opening a URL/path via the API.",
     icon: mdiCogs,
+  },
+  {
+    title: "Send Notifications",
+    description: "Send system notifications via the API.",
+    icon: mdiBell,
   },
   {
     title: "Cross-Platform",
