@@ -11,7 +11,7 @@ Sends a notification.
 ```json
 {
     "title": "Test",
-    "body": "This is a message",
+    "message": "This is a message",
     "icon": "I:\\Pictures\\someicon.png"
 }
 ```

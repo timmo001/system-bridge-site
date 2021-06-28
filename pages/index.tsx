@@ -15,7 +15,6 @@ import {
   mdiForumOutline,
   mdiGithub,
   mdiNotebookEditOutline,
-  mdiUpdate,
 } from "@mdi/js";
 
 import {
@@ -158,42 +157,6 @@ function Home(): ReactElement {
                     component="p"
                     variant="body1">
                     You can download the latest version of the application here.
-                  </Typography>
-                </Grid>
-              </Grid>
-            </CardActionArea>
-          </CardContent>
-        </a>
-        <a
-          href="https://github.com/timmo001/system-bridge/releases"
-          target="_blank">
-          <CardContent>
-            <CardActionArea>
-              <Grid
-                container
-                direction="row"
-                alignItems="center"
-                justify="space-evenly">
-                <Grid item>
-                  <Icon
-                    color={theme.palette.text.primary}
-                    path={mdiUpdate}
-                    size={12}
-                    title="Download"
-                  />
-                </Grid>
-                <Grid item>
-                  <Typography component="h4" variant="h5" gutterBottom>
-                    Updates
-                  </Typography>
-                  <Typography
-                    className={classes.gridText}
-                    color="textPrimary"
-                    component="p"
-                    variant="body1">
-                    The application will automatically update whenever a new
-                    version is released. You can also download the latest
-                    version manually from here.
                   </Typography>
                 </Grid>
               </Grid>

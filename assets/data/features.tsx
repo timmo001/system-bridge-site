@@ -1,10 +1,9 @@
 import {
+  mdiBell,
   mdiCogs,
   mdiDesktopTowerMonitor,
-  mdiFilmstrip,
   mdiHomeAssistant,
   mdiInformationOutline,
-  mdiSpeakerMultiple,
 } from "@mdi/js";
 import { apiServices } from "./api";
 
@@ -18,25 +17,19 @@ export const userFeatures: Array<Feature> = [
   {
     title: "System Information",
     description:
-      "Access your system's Audio, Battery, Bluetooth, CPU, Display, Filesystems, Graphics, Memory, Media, Networking, OS, Process and System information via the API.",
+      "Access your system's Audio, Battery, Bluetooth, CPU, Display, Filesystems, Graphics, Keyboard, Memory, Networking, OS, Process and System information via the API.",
     icon: mdiInformationOutline,
   },
   {
-    title: "Send Commands and Notifications",
+    title: "Send Commands and Open files and URLs",
     description:
-      "Automate your system by sending a command, opening a URL or path, or sending system notifications via the API.",
+      "Automate your system by sending a command or opening a URL/path via the API.",
     icon: mdiCogs,
   },
   {
-    title: "Audio Player",
-    description:
-      "Play music or sounds and change the volume of your device via the API.",
-    icon: mdiSpeakerMultiple,
-  },
-  {
-    title: "Video Player",
-    description: "Play local or hosted videos on your device via the API.",
-    icon: mdiFilmstrip,
+    title: "Send Notifications",
+    description: "Send system notifications via the API.",
+    icon: mdiBell,
   },
   {
     title: "Cross-Platform",
