@@ -29,7 +29,7 @@
   "devDependencies": {
     "@types/node": "16.0.0",
     "@types/react": "17.0.13",
-    "@types/react-syntax-highlighter": "13.5.1",
+    "@types/react-syntax-highlighter": "13.5.2",
     "@typescript-eslint/eslint-plugin": "4.28.2",
     "@typescript-eslint/parser": "4.28.2",
     "eslint": "7.30.0",
