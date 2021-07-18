@@ -48,7 +48,7 @@ export const apiServices: GenericObject<APIServiceDescription> = {
   audio: {
     title: "Audio",
     icon: mdiSpeakerMultiple,
-    description: "Play audio, change volume, and get information.",
+    description: "Change volume, and get information.",
     docs: mdAudio,
   },
   battery: {
