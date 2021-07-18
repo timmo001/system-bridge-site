@@ -9,7 +9,6 @@ import {
   mdiDesktopTowerMonitor,
   mdiExpansionCard,
   mdiFileDocument,
-  mdiFilmstrip,
   mdiHarddisk,
   mdiKeyboard,
   mdiMemory,
@@ -28,7 +27,6 @@ import mdDisplay from "assets/data/api/services/display.md";
 import mdFilesystem from "assets/data/api/services/filesystem.md";
 import mdGraphics from "assets/data/api/services/graphics.md";
 import mdKeyboard from "assets/data/api/services/keyboard.md";
-import mdMedia from "assets/data/api/services/media.md";
 import mdMemory from "assets/data/api/services/memory.md";
 import mdNetwork from "assets/data/api/services/network.md";
 import mdNotification from "assets/data/api/services/notification.md";
@@ -78,7 +76,7 @@ export const apiServices: GenericObject<APIServiceDescription> = {
   display: {
     title: "Display",
     icon: mdiMonitor,
-    description: "Display information and brightness control.",
+    description: "Display information.",
     docs: mdDisplay,
   },
   filesystem: {
@@ -98,12 +96,6 @@ export const apiServices: GenericObject<APIServiceDescription> = {
     icon: mdiKeyboard,
     description: "Sends keyboard key presses.",
     docs: mdKeyboard,
-  },
-  media: {
-    title: "Media",
-    icon: mdiFilmstrip,
-    description: "Play media files and control playback.",
-    docs: mdMedia,
   },
   memory: {
     title: "Memory",
