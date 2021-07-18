@@ -82,3 +82,27 @@ Opens a new private window, if your current window is a browser. This is an exam
     ]
 }
 ```
+
+### Example: Type "Hello World"
+
+Types the text using the string you provide.
+
+#### Request
+
+`POST /keyboard`
+
+```json
+{
+    "text": "Hello World"
+}
+```
+
+#### Response
+
+`201 Created`
+
+```json
+{
+    "text": "Hello World"
+}
+```
