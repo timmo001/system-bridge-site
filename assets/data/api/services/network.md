@@ -64,6 +64,11 @@ Gets networking information.
             "rx_sec": 665824.9154081043,
             "tx_sec": 30464.574564661216,
             "ms": 48468
+        },
+        "wifi": {
+            "connections": {},
+            "interfaces": {},
+            "networks": {}
         }
     }
 }
