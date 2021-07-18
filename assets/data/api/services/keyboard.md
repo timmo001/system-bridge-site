@@ -53,3 +53,32 @@ etc.
     "key": "audio_pause"
 }
 ```
+
+### Example: Open a new window using keyboard modifiers
+
+Opens a new private window, if your current window is a browser. This is an example of using modifiers see [here](http://robotjs.io/docs/syntax#keytapkey-modifier) for more info on what modifiers are available.
+
+#### Request
+
+`POST /keyboard`
+
+```json
+{
+    "key": "n",
+    "modifiers": ["control", "shift"]
+}
+```
+
+#### Response
+
+`201 Created`
+
+```json
+{
+    "key": "n",
+    "modifiers": [
+        "control",
+        "shift"
+    ]
+}
+```
