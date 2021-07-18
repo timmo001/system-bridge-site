@@ -15,6 +15,7 @@ import {
   mdiMonitor,
   mdiNetworkOutline,
   mdiSpeakerMultiple,
+  mdiUsb,
 } from "@mdi/js";
 
 import { GenericObject } from "components/Types";
@@ -34,6 +35,7 @@ import mdOpen from "assets/data/api/services/open.md";
 import mdOs from "assets/data/api/services/os.md";
 import mdProcesses from "assets/data/api/services/processes.md";
 import mdSystem from "assets/data/api/services/system.md";
+import mdUsb from "assets/data/api/services/usb.md";
 
 export interface APIServiceDescription {
   title: string;
@@ -138,5 +140,11 @@ export const apiServices: GenericObject<APIServiceDescription> = {
     icon: mdiDesktopTower,
     description: "Get system informaiton.",
     docs: mdSystem,
+  },
+  usb: {
+    title: "USB",
+    icon: mdiUsb,
+    description: "Get USB informaiton.",
+    docs: mdUsb,
   },
 };
