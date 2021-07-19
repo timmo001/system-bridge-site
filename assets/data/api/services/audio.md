@@ -106,7 +106,7 @@ Lowers the system volume by a percentage. Applicable range for value: `0-100`.
 
 #### Request
 
-`PUT /audio/volume`
+`PUT /audio/volumedown`
 
 ```json
 {
@@ -136,7 +136,7 @@ Raises the system volume by a percentage. Applicable range for value: `0-100`.
 
 #### Request
 
-`PUT /audio/volume`
+`PUT /audio/volumeup`
 
 ```json
 {
