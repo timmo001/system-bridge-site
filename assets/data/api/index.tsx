@@ -60,7 +60,7 @@ export const apiServices: GenericObject<APIServiceDescription> = {
   bluetooth: {
     title: "Bluetooth",
     icon: mdiBluetoothConnect,
-    description: "Bluetooth configuratoin and devices.",
+    description: "Bluetooth configuration and devices.",
     docs: mdBluetooth,
   },
   command: {
@@ -132,19 +132,19 @@ export const apiServices: GenericObject<APIServiceDescription> = {
   processes: {
     title: "Processes",
     icon: mdiApplicationCog,
-    description: "Show proccess information.",
+    description: "Show process information.",
     docs: mdProcesses,
   },
   system: {
     title: "System",
     icon: mdiDesktopTower,
-    description: "Get system informaiton.",
+    description: "Get system information.",
     docs: mdSystem,
   },
   usb: {
     title: "USB",
     icon: mdiUsb,
-    description: "Get USB informaiton.",
+    description: "Get USB information.",
     docs: mdUsb,
   },
 };
