@@ -62,7 +62,7 @@ function Layout(props: LayoutProps): ReactElement {
       <Container className={classes.footer} component="footer" maxWidth="xl">
         <CardContent>
           <Typography component="div" variant="subtitle1">
-            Website source avaliable on{" "}
+            Website source available on{" "}
             <a
               href="https://github.com/timmo001/system-bridge-site"
               target="_blank">
