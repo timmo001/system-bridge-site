@@ -1,4 +1,7 @@
 module.exports = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   webpack: (config) => {
     return Object.assign({}, config, {
       module: Object.assign({}, config.module, {
