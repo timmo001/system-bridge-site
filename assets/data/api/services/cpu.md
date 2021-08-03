@@ -37,7 +37,7 @@ Gets CPU information.
     "physicalCores": 8,
     "processors": 1,
     "socket": "AM4",
-    "flags": "de pse tsc sep mtrr mca cmov psn clfsh ds mmx fxsr sse sse2 ss htt tm ia64 pbe",
+    "flags": "de pse tsc sep mtrr mca cmov psn clfsh ds mmx",
     "virtualization": true,
     "cache": {
       "l1d": 0,
