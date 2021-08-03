@@ -44,7 +44,6 @@ let theme = createTheme({
     MuiTypography: {
       h2: {
         textAlign: "center",
-        fontSize: "3.25rem",
       },
       h3: {
         marginTop: 64,

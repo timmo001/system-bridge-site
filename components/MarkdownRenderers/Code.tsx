@@ -1,8 +1,5 @@
 import React, { ReactElement, useMemo } from "react";
-import {
-  ReactBaseProps,
-  ReactMarkdownProps,
-} from "react-markdown/src/ast-to-react";
+import { ReactMarkdownProps } from "react-markdown/src/ast-to-react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
@@ -10,7 +7,7 @@ function Code({
   className,
   children,
   inline,
-}: ReactBaseProps &
+}: JSX.IntrinsicElements["code"] &
   ReactMarkdownProps & {
     inline?: boolean;
   }): ReactElement {
