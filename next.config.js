@@ -1,7 +1,4 @@
 module.exports = {
-  future: {
-    webpack5: true,
-  },
   webpack: (config) => {
     return Object.assign({}, config, {
       module: Object.assign({}, config.module, {

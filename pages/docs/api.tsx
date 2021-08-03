@@ -148,7 +148,7 @@ function API(): ReactElement {
                       <Typography
                         className={classes.gridText}
                         color="textPrimary"
-                        component="p"
+                        component="span"
                         variant="body1">
                         {description}
                       </Typography>
