@@ -1,8 +1,9 @@
 ## Receiving Data
 
-Once [registered](/docs/websocket?id=registerListener), the server
-will send messages when data changes. Data can come from either
-the observer or by requesting it from the server.
+Once
+[registered](https://system-bridge.timmo.dev/docs/websocket?id=registerListener),
+the server will send messages when data changes. Data can come
+from either the observer or by requesting it from the server.
 
 > The frequncy the observer checks for updates can be configured
 > in the application's settings.

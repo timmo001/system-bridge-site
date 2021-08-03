@@ -1,7 +1,7 @@
 ## Requesting Data
 
 To request on demand data from the server, first
-[register as a listener](/docs/websocket?id=registerListener),
+[register as a listener](https://system-bridge.timmo.dev/docs/websocket?id=registerListener),
 then send a message with an array of each endpoint you want to
 receive data from.
 
