@@ -26,6 +26,7 @@ export async function getServerSideProps({
   data.push({ path: "/docs/api", updated: "2021-08-03T00:00:00.000Z" });
   data.push({ path: "/docs/mqtt", updated: "2021-08-03T00:00:00.000Z" });
   data.push({ path: "/docs/websocket", updated: "2021-08-03T00:00:00.000Z" });
+  data.push({ path: "/faq", updated: "2021-08-03T00:00:00.000Z" });
 
   const sitemap = generateSitemap(data, "https://system-bridge.timmo.dev");
 
