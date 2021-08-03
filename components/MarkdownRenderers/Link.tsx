@@ -1,13 +1,10 @@
 import React, { ReactElement } from "react";
-import {
-  ReactBaseProps,
-  ReactMarkdownProps,
-} from "react-markdown/src/ast-to-react";
+import { ReactMarkdownProps } from "react-markdown/src/ast-to-react";
 
 function Link({
   children,
   href,
-}: ReactBaseProps & ReactMarkdownProps): ReactElement {
+}: JSX.IntrinsicElements["a"] & ReactMarkdownProps): ReactElement {
   return (
     <a
       href={href as string}
