@@ -8,7 +8,12 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 // eslint-disable-next-line import/no-named-as-default
 import Icon from "@mdi/react";
-import { mdiForumOutline, mdiGithub, mdiNotebookEditOutline } from "@mdi/js";
+import {
+  mdiFileDocumentMultiple,
+  mdiForumOutline,
+  mdiGithub,
+  mdiNotebookEditOutline,
+} from "@mdi/js";
 
 import useStyles from "assets/jss/components/headerLinks";
 
@@ -51,7 +56,7 @@ function HeaderLinks(): ReactElement {
             target="_blank">
             <Icon
               color={theme.palette.text.primary}
-              path={mdiNotebookEditOutline}
+              path={mdiFileDocumentMultiple}
               size={1}
             />
           </Button>
@@ -75,7 +80,26 @@ function HeaderLinks(): ReactElement {
         </Tooltip>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Tooltip title="GitHub" classes={{ tooltip: classes.tooltip }}>
+        <Tooltip
+          title="Contribute to the Website/Documentation"
+          classes={{ tooltip: classes.tooltip }}>
+          <Button
+            variant="text"
+            className={classes.navLink}
+            href="https://github.com/timmo001/system-bridge-site"
+            target="_blank">
+            <Icon
+              color={theme.palette.text.primary}
+              path={mdiNotebookEditOutline}
+              size={1}
+            />
+          </Button>
+        </Tooltip>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Tooltip
+          title="Contribute to the Application"
+          classes={{ tooltip: classes.tooltip }}>
           <Button
             variant="text"
             className={classes.navLink}
