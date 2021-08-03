@@ -1,6 +1,6 @@
 module.exports = {
-  future: {
-    webpack5: true,
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   webpack: (config) => {
     return Object.assign({}, config, {

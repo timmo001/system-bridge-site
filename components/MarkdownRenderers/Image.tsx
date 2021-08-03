@@ -1,15 +1,12 @@
 import React, { ReactElement } from "react";
-import {
-  ReactBaseProps,
-  ReactMarkdownProps,
-} from "react-markdown/src/ast-to-react";
+import { ReactMarkdownProps } from "react-markdown/src/ast-to-react";
 
 import ImageComponent from "../Image";
 
 function Image({
   alt,
   src,
-}: ReactBaseProps & ReactMarkdownProps): ReactElement {
+}: JSX.IntrinsicElements["img"] & ReactMarkdownProps): ReactElement {
   return (
     <ImageComponent
       hideCaption

@@ -70,7 +70,7 @@ function Home(): ReactElement {
                   </Typography>
                   <Typography
                     color="textSecondary"
-                    component="p"
+                    component="span"
                     variant="subtitle1">
                     <Markdown escapeHtml={false} source={description} />
                   </Typography>
@@ -114,7 +114,7 @@ function Home(): ReactElement {
                       </Typography>
                       <Typography
                         color="textSecondary"
-                        component="p"
+                        component="span"
                         variant="subtitle1">
                         {description}
                       </Typography>
@@ -154,7 +154,7 @@ function Home(): ReactElement {
                   <Typography
                     className={classes.gridText}
                     color="textPrimary"
-                    component="p"
+                    component="span"
                     variant="body1">
                     You can download the latest version of the application here.
                   </Typography>
@@ -191,7 +191,7 @@ function Home(): ReactElement {
                   <Typography
                     className={classes.gridText}
                     color="textPrimary"
-                    component="p"
+                    component="span"
                     variant="body1">
                     Participate in discussions and get help here.
                   </Typography>
@@ -225,7 +225,7 @@ function Home(): ReactElement {
                   <Typography
                     className={classes.gridText}
                     color="textPrimary"
-                    component="p"
+                    component="span"
                     variant="body1">
                     Thought of a feature that could be added?
                     <br />
@@ -261,7 +261,7 @@ function Home(): ReactElement {
                   <Typography
                     className={classes.gridText}
                     color="textPrimary"
-                    component="p"
+                    component="span"
                     variant="body1">
                     Want to make a change? Want to browse the source code? It's
                     here.
