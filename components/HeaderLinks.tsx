@@ -20,7 +20,14 @@ function HeaderLinks(): ReactElement {
       <ListItem className={classes.listItem}>
         <Link href="/docs/api">
           <Button variant="text" className={classes.navLink}>
-            <span className={classes.listItemText}>API Docs</span>
+            <span className={classes.listItemText}>API</span>
+          </Button>
+        </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Link href="/docs/websocket">
+          <Button variant="text" className={classes.navLink}>
+            <span className={classes.listItemText}>WebSocket</span>
           </Button>
         </Link>
       </ListItem>

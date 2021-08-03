@@ -22,10 +22,10 @@ import { TabContext, TabList } from "@material-ui/lab";
 // eslint-disable-next-line import/no-named-as-default
 import Icon from "@mdi/react";
 
-import { APIServiceDescription, apiServices } from "assets/data/api";
+import { websocketData, WebsocketDescription } from "assets/data/websocket";
 import Layout from "components/Layout";
-import useStyles from "assets/jss/components/layout";
 import Markdown from "components/Markdown";
+import useStyles from "assets/jss/components/layout";
 
 interface StyledTabProps {
   label: string;
@@ -46,27 +46,27 @@ const StyledTab = withStyles((theme: Theme) =>
   })
 )((props: StyledTabProps) => <Tab disableRipple {...props} />);
 
-function API(): ReactElement {
+function WebSocket(): ReactElement {
   const router = useRouter();
-  const { endpoint } = router.query;
+  const { id } = router.query;
 
-  const [currentTab, setCurrentTab] = useState<string>("audio");
+  const [currentTab, setCurrentTab] = useState<string>("registerListener");
 
   useEffect(() => {
-    setCurrentTab(typeof endpoint === "string" ? endpoint : "audio");
+    setCurrentTab(typeof id === "string" ? id : "registerListener");
     ref.current.scrollIntoView({ behavior: "smooth" });
-  }, [endpoint]);
+  }, [id]);
 
   const ref = useRef(null);
 
   function handleChangeTab(_event: ChangeEvent, value: string): void {
     setCurrentTab(value);
     ref.current.scrollIntoView({ behavior: "smooth" });
-    router.push({ query: { endpoint: value } }, null, { shallow: true });
+    router.push({ query: { id: value } }, null, { shallow: true });
   }
 
-  const { title, description, docs, icon }: APIServiceDescription = useMemo(
-    () => apiServices[currentTab],
+  const { title, docs, icon }: WebsocketDescription = useMemo(
+    () => websocketData[currentTab],
     [currentTab]
   );
 
@@ -78,18 +78,12 @@ function API(): ReactElement {
       <div ref={ref} />
       <Layout
         classes={classes}
-        title="API"
-        url="https://system-bridge.timmo.dev/docs/api"
+        title="WebSocket"
+        url="https://system-bridge.timmo.dev/docs/websocket"
         description="A bridge for your systems.">
         <Container className={classes.main} component="article" maxWidth="lg">
           <Typography component="h1" variant="h2">
-            API
-          </Typography>
-          <Typography color="textSecondary" component="h3" variant="subtitle1">
-            <Markdown
-              escapeHtml
-              source="All endpoints require an `api-key` header which can be generated and obtained from the app settings."
-            />
+            WebSocket
           </Typography>
           <TabContext value={currentTab}>
             <Grid
@@ -105,16 +99,16 @@ function API(): ReactElement {
                   orientation="vertical"
                   variant="scrollable"
                   onChange={handleChangeTab}>
-                  {Object.keys(apiServices).map((key: string) => (
+                  {Object.keys(websocketData).map((key: string) => (
                     <StyledTab
                       key={key}
-                      label={apiServices[key].title}
+                      label={websocketData[key].title}
                       icon={
                         <Icon
                           color={theme.palette.text.primary}
-                          path={apiServices[key].icon}
+                          path={websocketData[key].icon}
                           size={1}
-                          title={title}
+                          title={websocketData[key].title}
                         />
                       }
                       value={key}
@@ -145,13 +139,6 @@ function API(): ReactElement {
                       <Typography component="h2" variant="h3" gutterBottom>
                         {title}
                       </Typography>
-                      <Typography
-                        className={classes.gridText}
-                        color="textPrimary"
-                        component="span"
-                        variant="body1">
-                        {description}
-                      </Typography>
                       <Markdown escapeHtml={false} source={docs} />
                     </Grid>
                   </Grid>
@@ -172,4 +159,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default API;
+export default WebSocket;
