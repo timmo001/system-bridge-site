@@ -48,7 +48,7 @@ function Home(): ReactElement {
           container
           direction="row"
           alignItems="flex-start"
-          justify="space-around">
+          justifyContent="space-around">
           {userFeatures.map(
             ({ title, description, icon }: Feature, key: number) => (
               <Grid
@@ -86,7 +86,7 @@ function Home(): ReactElement {
           container
           direction="row"
           alignItems="center"
-          justify="space-around">
+          justifyContent="space-around">
           {apiFeatures.map(
             ({ title, description, icon }: Feature, key: number) => (
               <Grid
@@ -138,7 +138,7 @@ function Home(): ReactElement {
                 container
                 direction="row"
                 alignItems="center"
-                justify="space-evenly">
+                justifyContent="space-evenly">
                 <Grid item>
                   <Icon
                     color={theme.palette.text.primary}
@@ -175,7 +175,7 @@ function Home(): ReactElement {
                 container
                 direction="row"
                 alignItems="center"
-                justify="space-evenly">
+                justifyContent="space-evenly">
                 <Grid item>
                   <Icon
                     color={theme.palette.text.primary}
@@ -209,7 +209,7 @@ function Home(): ReactElement {
                 container
                 direction="row"
                 alignItems="center"
-                justify="space-evenly">
+                justifyContent="space-evenly">
                 <Grid item>
                   <Icon
                     color={theme.palette.text.primary}
@@ -245,7 +245,7 @@ function Home(): ReactElement {
                 container
                 direction="row"
                 alignItems="center"
-                justify="space-evenly">
+                justifyContent="space-evenly">
                 <Grid item>
                   <Icon
                     color={theme.palette.text.primary}

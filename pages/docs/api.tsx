@@ -96,7 +96,7 @@ function API(): ReactElement {
               container
               direction="row"
               alignItems="flex-start"
-              justify="flex-start"
+              justifyContent="flex-start"
               spacing={2}>
               <Grid item>
                 <TabList
@@ -127,12 +127,12 @@ function API(): ReactElement {
                   container
                   direction="row"
                   alignItems="flex-start"
-                  justify="space-around">
+                  justifyContent="space-around">
                   <Grid
                     container
                     direction="row"
                     alignItems="flex-start"
-                    justify="space-evenly">
+                    justifyContent="space-evenly">
                     <Grid className={classes.name} item>
                       <Icon
                         color={theme.palette.text.primary}

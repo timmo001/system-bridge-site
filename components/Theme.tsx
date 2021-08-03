@@ -1,7 +1,7 @@
-import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
+import { createTheme, responsiveFontSizes } from "@material-ui/core/styles";
 import { deepPurple, grey } from "@material-ui/core/colors";
 
-let theme = createMuiTheme({
+let theme = createTheme({
   palette: {
     type: "dark",
     primary: {
