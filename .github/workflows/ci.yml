@@ -79,7 +79,7 @@ jobs:
           use-quiet-mode: no
           use-verbose-mode: no
           config-file: mlc_config.json
-          folder-path: .github
+          folder-path: .github, assets/data
           file-path: ./README.md
           max-depth: -1
           check-modified-files-only: no
