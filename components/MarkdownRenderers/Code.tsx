@@ -14,7 +14,6 @@ function Code({
   ReactMarkdownProps & {
     inline?: boolean;
   }): ReactElement {
-  console.log(className, inline);
   const language = useMemo<string>(
     () => className?.replace("language-", ""),
     []
