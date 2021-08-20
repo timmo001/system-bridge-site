@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { ReactMarkdownProps } from "react-markdown/src/ast-to-react";
+import { ReactMarkdownProps } from "react-markdown/lib/ast-to-react";
 
 function Link({
   children,
@@ -16,7 +16,8 @@ function Link({
         )
           ? "_self"
           : "_blank"
-      }>
+      }
+      rel="noreferrer">
       {children}
     </a>
   );
