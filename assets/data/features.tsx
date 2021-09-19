@@ -1,4 +1,5 @@
 import {
+  mdiAndroid,
   mdiBell,
   mdiCogs,
   mdiDesktopTowerMonitor,
@@ -41,6 +42,12 @@ export const userFeatures: Array<Feature> = [
     description:
       "Interact with your Bridges using [Home Assistant](https://www.home-assistant.io/integrations/system_bridge).",
     icon: mdiHomeAssistant,
+  },
+  {
+    title: "Android Companion App",
+    description:
+      "You can find the Android companion app on the [Play Store](https://play.google.com/store/apps/details?id=dev.timmo.systembridge). The source for this app can be found on [GitHub](https://github.com/timmo001/system-bridge-android-companion).",
+    icon: mdiAndroid,
   },
 ];
 
