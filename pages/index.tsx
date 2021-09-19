@@ -11,6 +11,7 @@ import {
 // eslint-disable-next-line import/no-named-as-default
 import Icon from "@mdi/react";
 import {
+  mdiAndroid,
   mdiDownloadCircleOutline,
   mdiForumOutline,
   mdiGithub,
@@ -79,6 +80,48 @@ function Home(): ReactElement {
             )
           )}
         </Grid>
+
+        <Typography component="h3" variant="h3" gutterBottom>
+          Android Companion App
+        </Typography>
+        <CardContent>
+          <Grid
+            container
+            direction="row"
+            alignItems="center"
+            justifyContent="space-evenly">
+            <Grid item>
+              <Icon
+                color={theme.palette.text.primary}
+                path={mdiAndroid}
+                size={12}
+                title="Download"
+              />
+            </Grid>
+            <Grid item>
+              <Typography
+                className={classes.gridText}
+                color="textPrimary"
+                component="span"
+                variant="body1">
+                You can find the Android companion app on the{" "}
+                <a
+                  href="https://play.google.com/store/apps/details?id=dev.timmo.systembridge"
+                  target="_blank">
+                  Play Store
+                </a>
+                . The source for this app can be found on{" "}
+                <a
+                  href="https://github.com/timmo001/system-bridge-android-companion"
+                  target="_blank">
+                  GitHub
+                </a>
+                .
+              </Typography>
+            </Grid>
+          </Grid>
+        </CardContent>
+
         <Typography component="h3" variant="h3" gutterBottom>
           API Endpoints
         </Typography>
