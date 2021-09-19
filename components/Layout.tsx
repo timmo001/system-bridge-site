@@ -65,7 +65,8 @@ function Layout(props: LayoutProps): ReactElement {
             Website source available on{" "}
             <a
               href="https://github.com/timmo001/system-bridge-site"
-              target="_blank">
+              target="_blank"
+            >
               GitHub
             </a>
             .

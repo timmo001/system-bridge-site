@@ -80,7 +80,8 @@ function Mqtt(): ReactElement {
         classes={classes}
         title="Mqtt"
         url="https://system-bridge.timmo.dev/docs/mqtt"
-        description="A bridge for your systems.">
+        description="A bridge for your systems."
+      >
         <Container className={classes.main} component="article" maxWidth="lg">
           <Typography component="h1" variant="h2">
             MQTT
@@ -91,14 +92,16 @@ function Mqtt(): ReactElement {
               direction="row"
               alignItems="flex-start"
               justifyContent="flex-start"
-              spacing={2}>
+              spacing={2}
+            >
               <Grid item>
                 <TabList
                   className={classes.verticalTabs}
                   aria-label="Services"
                   orientation="vertical"
                   variant="scrollable"
-                  onChange={handleChangeTab}>
+                  onChange={handleChangeTab}
+                >
                   {Object.keys(mqttData).map((key: string) => (
                     <StyledTab
                       key={key}
@@ -121,12 +124,14 @@ function Mqtt(): ReactElement {
                   container
                   direction="row"
                   alignItems="flex-start"
-                  justifyContent="space-around">
+                  justifyContent="space-around"
+                >
                   <Grid
                     container
                     direction="row"
                     alignItems="flex-start"
-                    justifyContent="space-evenly">
+                    justifyContent="space-evenly"
+                  >
                     <Grid className={classes.name} item>
                       <Icon
                         color={theme.palette.text.primary}
