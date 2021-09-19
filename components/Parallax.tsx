@@ -51,7 +51,8 @@ function Parallax({
       style={{
         backgroundImage: "url(" + image + ")",
         transform: transform,
-      }}>
+      }}
+    >
       {children}
     </div>
   );

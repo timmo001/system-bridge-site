@@ -16,7 +16,8 @@ function Faq(): ReactElement {
         classes={classes}
         title="FAQ"
         url="https://system-bridge.timmo.dev/faq"
-        description="A bridge for your systems.">
+        description="A bridge for your systems."
+      >
         <Container className={classes.main} component="article" maxWidth="lg">
           <Typography component="h1" variant="h2">
             FAQ
@@ -26,7 +27,8 @@ function Faq(): ReactElement {
             direction="row"
             alignItems="flex-start"
             justifyContent="flex-start"
-            spacing={2}>
+            spacing={2}
+          >
             <Grid item xs>
               <Markdown escapeHtml={false} source={mdFaq} />
             </Grid>
