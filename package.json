@@ -33,7 +33,7 @@
     "@typescript-eslint/eslint-plugin": "4.31.0",
     "@typescript-eslint/parser": "4.31.1",
     "eslint": "7.32.0",
-    "eslint-import-resolver-typescript": "2.4.0",
+    "eslint-import-resolver-typescript": "2.5.0",
     "eslint-plugin-import": "2.24.2",
     "prettier": "2.4.0",
     "raw-loader": "4.0.2",
