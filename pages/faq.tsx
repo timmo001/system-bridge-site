@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { GetStaticProps } from "next";
-import { Container, Grid, Typography } from "@material-ui/core";
+import { Container, Grid, Typography } from "@mui/material";
 
 import Layout from "components/Layout";
 import Markdown from "components/Markdown";

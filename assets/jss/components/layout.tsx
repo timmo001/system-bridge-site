@@ -1,4 +1,5 @@
-import { makeStyles, Theme } from "@material-ui/core/styles";
+import { Theme } from "@mui/material/styles";
+import makeStyles from "@mui/styles/makeStyles";
 
 const layoutStyle = makeStyles((theme: Theme) => ({
   alert: {
@@ -67,7 +68,7 @@ const layoutStyle = makeStyles((theme: Theme) => ({
   },
   gridText: {
     width: 380,
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       width: "100%",
     },
   },

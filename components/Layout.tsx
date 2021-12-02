@@ -1,9 +1,7 @@
 import React, { ReactElement } from "react";
 import Head from "next/head";
-import { ClassNameMap } from "@material-ui/styles";
-import CardContent from "@material-ui/core/CardContent";
-import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
+import { Container, CardContent, Typography } from "@mui/material";
+import { ClassNameMap } from "@mui/styles";
 
 import Header from "./Header";
 import HeaderLinks from "./HeaderLinks";
@@ -65,8 +63,7 @@ function Layout(props: LayoutProps): ReactElement {
             Website source available on{" "}
             <a
               href="https://github.com/timmo001/system-bridge-site"
-              target="_blank"
-            >
+              target="_blank">
               GitHub
             </a>
             .

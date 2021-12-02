@@ -10,15 +10,15 @@ import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import {
   Container,
-  createStyles,
   Grid,
   Tab,
   Theme,
   Typography,
   useTheme,
-  withStyles,
-} from "@material-ui/core";
-import { TabContext, TabList } from "@material-ui/lab";
+} from "@mui/material";
+import { TabContext, TabList } from "@mui/lab";
+import createStyles from "@mui/styles/createStyles";
+import withStyles from "@mui/styles/withStyles";
 // eslint-disable-next-line import/no-named-as-default
 import Icon from "@mdi/react";
 
@@ -80,8 +80,7 @@ function API(): ReactElement {
         classes={classes}
         title="API"
         url="https://system-bridge.timmo.dev/docs/api"
-        description="A bridge for your systems."
-      >
+        description="A bridge for your systems.">
         <Container className={classes.main} component="article" maxWidth="lg">
           <Typography component="h1" variant="h2">
             API
@@ -98,16 +97,14 @@ function API(): ReactElement {
               direction="row"
               alignItems="flex-start"
               justifyContent="flex-start"
-              spacing={2}
-            >
+              spacing={2}>
               <Grid item>
                 <TabList
                   className={classes.verticalTabs}
                   aria-label="Services"
                   orientation="vertical"
                   variant="scrollable"
-                  onChange={handleChangeTab}
-                >
+                  onChange={handleChangeTab}>
                   {Object.keys(apiServices).map((key: string) => (
                     <StyledTab
                       key={key}
@@ -130,14 +127,12 @@ function API(): ReactElement {
                   container
                   direction="row"
                   alignItems="flex-start"
-                  justifyContent="space-around"
-                >
+                  justifyContent="space-around">
                   <Grid
                     container
                     direction="row"
                     alignItems="flex-start"
-                    justifyContent="space-evenly"
-                  >
+                    justifyContent="space-evenly">
                     <Grid className={classes.name} item>
                       <Icon
                         color={theme.palette.text.primary}
@@ -154,8 +149,7 @@ function API(): ReactElement {
                         className={classes.gridText}
                         color="textPrimary"
                         component="span"
-                        variant="body1"
-                      >
+                        variant="body1">
                         {description}
                       </Typography>
                       <Markdown escapeHtml={false} source={docs} />

@@ -1,11 +1,8 @@
 import React, { ReactElement } from "react";
 import Link from "next/link";
-import { useTheme } from "@material-ui/core/styles";
+import { List, ListItem, Button, Tooltip } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import clsx from "clsx";
-import Button from "@material-ui/core/Button";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import Tooltip from "@material-ui/core/Tooltip";
 // eslint-disable-next-line import/no-named-as-default
 import Icon from "@mdi/react";
 import {
@@ -55,14 +52,12 @@ function HeaderLinks(): ReactElement {
       <ListItem className={classes.listItem}>
         <Tooltip
           title="Suggest a Feature / Report a Bug"
-          classes={{ tooltip: classes.tooltip }}
-        >
+          classes={{ tooltip: classes.tooltip }}>
           <Button
             variant="text"
             className={classes.navLink}
             href="https://github.com/timmo001/system-bridge/issues"
-            target="_blank"
-          >
+            target="_blank">
             <Icon
               color={theme.palette.text.primary}
               path={mdiFileDocumentMultiple}
@@ -74,14 +69,12 @@ function HeaderLinks(): ReactElement {
       <ListItem className={classes.listItem}>
         <Tooltip
           title="Discussions/Help"
-          classes={{ tooltip: classes.tooltip }}
-        >
+          classes={{ tooltip: classes.tooltip }}>
           <Button
             variant="text"
             className={classes.navLink}
             href="https://github.com/timmo001/system-bridge/discussions"
-            target="_blank"
-          >
+            target="_blank">
             <Icon
               color={theme.palette.text.primary}
               path={mdiForumOutline}
@@ -93,14 +86,12 @@ function HeaderLinks(): ReactElement {
       <ListItem className={classes.listItem}>
         <Tooltip
           title="Contribute to the Website/Documentation"
-          classes={{ tooltip: classes.tooltip }}
-        >
+          classes={{ tooltip: classes.tooltip }}>
           <Button
             variant="text"
             className={classes.navLink}
             href="https://github.com/timmo001/system-bridge-site"
-            target="_blank"
-          >
+            target="_blank">
             <Icon
               color={theme.palette.text.primary}
               path={mdiNotebookEditOutline}
@@ -112,14 +103,12 @@ function HeaderLinks(): ReactElement {
       <ListItem className={classes.listItem}>
         <Tooltip
           title="Contribute to the Application"
-          classes={{ tooltip: classes.tooltip }}
-        >
+          classes={{ tooltip: classes.tooltip }}>
           <Button
             variant="text"
             className={classes.navLink}
             href="https://github.com/timmo001/system-bridge"
-            target="_blank"
-          >
+            target="_blank">
             <Icon
               color={theme.palette.text.primary}
               path={mdiGithub}
