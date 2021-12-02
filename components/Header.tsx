@@ -80,41 +80,39 @@ function Header(props: HeaderProps): ReactElement {
         [classes.fixed]: fixed,
       })}
       color={color}>
-      <Container maxWidth="xl">
-        <Toolbar className={classes.container}>
-          <Link href="/">
-            <Button>
-              <Typography className={classes.title} component="h1" variant="h4">
-                System Bridge
-              </Typography>
-            </Button>
-          </Link>
-          <Hidden mdDown implementation="css">
-            {rightLinks}
-          </Hidden>
-          <Hidden mdUp>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              onClick={handleDrawerToggle}
-              size="large">
-              <Menu />
-            </IconButton>
-          </Hidden>
-        </Toolbar>
-        <Hidden mdUp implementation="css">
-          <Drawer
-            variant="temporary"
-            anchor={"right"}
-            open={mobileOpen}
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            onClose={handleDrawerToggle}>
-            <div className={classes.appResponsive}>{rightLinks}</div>
-          </Drawer>
+      <Toolbar className={classes.container}>
+        <Link href="/">
+          <Button>
+            <Typography className={classes.title} component="h1" variant="h4">
+              System Bridge
+            </Typography>
+          </Button>
+        </Link>
+        <Hidden mdDown implementation="css">
+          {rightLinks}
         </Hidden>
-      </Container>
+        <Hidden mdUp>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerToggle}
+            size="large">
+            <Menu />
+          </IconButton>
+        </Hidden>
+      </Toolbar>
+      <Hidden mdUp implementation="css">
+        <Drawer
+          variant="temporary"
+          anchor={"right"}
+          open={mobileOpen}
+          classes={{
+            paper: classes.drawerPaper,
+          }}
+          onClose={handleDrawerToggle}>
+          <div className={classes.appResponsive}>{rightLinks}</div>
+        </Drawer>
+      </Hidden>
     </AppBar>
   );
 }
