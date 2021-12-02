@@ -79,7 +79,8 @@ function Header(props: HeaderProps): ReactElement {
         [classes.absolute]: absolute,
         [classes.fixed]: fixed,
       })}
-      color={color}>
+      color={color}
+    >
       <Toolbar className={classes.container}>
         <Link href="/">
           <Button>
@@ -96,7 +97,8 @@ function Header(props: HeaderProps): ReactElement {
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerToggle}
-            size="large">
+            size="large"
+          >
             <Menu />
           </IconButton>
         </Hidden>
@@ -109,7 +111,8 @@ function Header(props: HeaderProps): ReactElement {
           classes={{
             paper: classes.drawerPaper,
           }}
-          onClose={handleDrawerToggle}>
+          onClose={handleDrawerToggle}
+        >
           <div className={classes.appResponsive}>{rightLinks}</div>
         </Drawer>
       </Hidden>

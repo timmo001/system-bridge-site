@@ -38,7 +38,8 @@ function Image({
     <Fragment>
       <ButtonBase
         className={!showAsImage ? classes.galleryItem : ""}
-        onClick={openMediaDialog}>
+        onClick={openMediaDialog}
+      >
         <Card className={classes.galleryItemCard} elevation={hidePaper ? 0 : 1}>
           {showAsImage ? (
             <img src={media.url} alt={media.alternativeText} />
@@ -63,7 +64,8 @@ function Image({
         scroll="body"
         open={showDialog}
         onClick={closeMediaDialog}
-        onClose={closeMediaDialog}>
+        onClose={closeMediaDialog}
+      >
         {showDialog ? (
           <Fragment>
             {!hideTitle && media.alternativeText ? (
