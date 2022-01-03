@@ -298,19 +298,6 @@
   resolved "https://registry.yarnpkg.com/@mdi/react/-/react-1.5.0.tgz#461d2064ba12d509723bffc95e2f7169a6ac884a"
   integrity sha512-NztRgUxSYD+ImaKN94Tg66VVVqXj4SmlDGzZoz48H9riJ+Awha56sfXH2fegw819NWo7KI3oeS1Es0lNQqwr0w==
 
-"@mui/base@5.0.0-alpha.61":
-  version "5.0.0-alpha.61"
-  resolved "https://registry.yarnpkg.com/@mui/base/-/base-5.0.0-alpha.61.tgz#8b2a57aa87ca857a57ea6051ec924b0dbf03435d"
-  integrity sha512-xB2EksQsLYOwmBQRDdcJjKAflgBYE9KBZS/TBxIKBlfi4w1v7kCi5VCHTHIQgPSjgoTSt3hyI+yHO2fLvCbUWQ==
-  dependencies:
-    "@babel/runtime" "^7.16.3"
-    "@emotion/is-prop-valid" "^1.1.1"
-    "@mui/utils" "^5.2.3"
-    "@popperjs/core" "^2.4.4"
-    clsx "^1.1.1"
-    prop-types "^15.7.2"
-    react-is "^17.0.2"
-
 "@mui/base@5.0.0-alpha.63":
   version "5.0.0-alpha.63"
   resolved "https://registry.yarnpkg.com/@mui/base/-/base-5.0.0-alpha.63.tgz#8646b9b91dae128a474feadac74748c532ffef2c"
@@ -331,18 +318,18 @@
   dependencies:
     "@babel/runtime" "^7.16.3"
 
-"@mui/lab@5.0.0-alpha.61":
-  version "5.0.0-alpha.61"
-  resolved "https://registry.yarnpkg.com/@mui/lab/-/lab-5.0.0-alpha.61.tgz#3f604ac500ac3c28795fd5486d1baa56a97aeace"
-  integrity sha512-bLWTj8CR/C+HKOtrJVbAa0AYXGAdjZzQlwOQgvdw1YWNo3HQi+ers9BirDoqzP+j+t+0zh/YM2ZchFsc8KTGTA==
+"@mui/lab@5.0.0-alpha.63":
+  version "5.0.0-alpha.63"
+  resolved "https://registry.yarnpkg.com/@mui/lab/-/lab-5.0.0-alpha.63.tgz#9024ed77e6a598ddfbc94d3831df115886900e1a"
+  integrity sha512-BFexWjiiXZ2aWfSq+4j1cua7XmCt7BIDC27MgFWoKY6O0Fe3zeUz/6WH0M5+4VKT+yn3DC3vzWGAWKmNDa3TUQ==
   dependencies:
     "@babel/runtime" "^7.16.3"
     "@date-io/date-fns" "^2.11.0"
     "@date-io/dayjs" "^2.11.0"
     "@date-io/luxon" "^2.11.1"
     "@date-io/moment" "^2.11.0"
-    "@mui/base" "5.0.0-alpha.61"
-    "@mui/system" "^5.2.5"
+    "@mui/base" "5.0.0-alpha.63"
+    "@mui/system" "^5.2.6"
     "@mui/utils" "^5.2.3"
     clsx "^1.1.1"
     prop-types "^15.7.2"
@@ -409,7 +396,7 @@
     jss-plugin-vendor-prefixer "^10.8.2"
     prop-types "^15.7.2"
 
-"@mui/system@^5.2.5", "@mui/system@^5.2.6":
+"@mui/system@^5.2.6":
   version "5.2.6"
   resolved "https://registry.yarnpkg.com/@mui/system/-/system-5.2.6.tgz#153b534223caae254a98162eef06d6ab48ecff34"
   integrity sha512-PZ7bmpWOLikWgqn2zWv9/Xa7lxnRBOmfjoMH7c/IVYJs78W3971brXJ3xV9MEWWQcoqiYQeXzUJaNf4rFbKCBA==
