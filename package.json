@@ -9,7 +9,7 @@
     "start": "next start -p 3020"
   },
   "dependencies": {
-    "@emotion/react": "11.8.1",
+    "@emotion/react": "11.8.2",
     "@emotion/styled": "11.8.1",
     "@fontsource/roboto": "4.5.3",
     "@mdi/js": "6.5.95",
