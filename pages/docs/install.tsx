@@ -19,7 +19,7 @@ import { createStyles, withStyles } from "@mui/styles";
 import { TabContext, TabList } from "@mui/lab";
 import { Icon } from "@mdi/react";
 
-import { apiItems, APIDescription } from "assets/data/api";
+import { installItems, InstallDescription } from "assets/data/install";
 import Layout from "components/Layout";
 import Markdown from "components/Markdown";
 import useStyles from "assets/jss/components/layout";
@@ -62,8 +62,8 @@ function WebSocket(): ReactElement {
     router.push({ query: { id: value } }, null, { shallow: true });
   }
 
-  const { title, docs, icon }: APIDescription = useMemo(
-    () => apiItems[currentTab],
+  const { title, docs, icon }: InstallDescription = useMemo(
+    () => installItems[currentTab],
     [currentTab]
   );
 
@@ -99,16 +99,16 @@ function WebSocket(): ReactElement {
                   variant="scrollable"
                   onChange={handleChangeTab}
                 >
-                  {Object.keys(apiItems).map((key: string) => (
+                  {Object.keys(installItems).map((key: string) => (
                     <StyledTab
                       key={key}
-                      label={apiItems[key].title}
+                      label={installItems[key].title}
                       icon={
                         <Icon
                           color={theme.palette.text.primary}
-                          path={apiItems[key].icon}
+                          path={installItems[key].icon}
                           size={1}
-                          title={apiItems[key].title}
+                          title={installItems[key].title}
                         />
                       }
                       value={key}
