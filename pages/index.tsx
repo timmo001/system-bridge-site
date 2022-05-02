@@ -29,7 +29,8 @@ function Home(): ReactElement {
     <Layout
       classes={classes}
       url="https://system-bridge.timmo.dev"
-      description="A bridge for your systems.">
+      description="A bridge for your systems."
+    >
       <Container className={classes.main} component="article" maxWidth="lg">
         <Typography color="textPrimary" component="h2" variant="h2">
           A bridge for your systems
@@ -41,7 +42,8 @@ function Home(): ReactElement {
           container
           direction="row"
           alignItems="flex-start"
-          justifyContent="space-around">
+          justifyContent="space-around"
+        >
           {userFeatures.map(
             ({ title, description, icon }: Feature, key: number) => (
               <Grid
@@ -50,7 +52,8 @@ function Home(): ReactElement {
                 item
                 xl={4}
                 md={6}
-                xs={12}>
+                xs={12}
+              >
                 <Icon
                   color={theme.palette.text.primary}
                   path={icon}
@@ -64,7 +67,8 @@ function Home(): ReactElement {
                   <Typography
                     color="textSecondary"
                     component="span"
-                    variant="subtitle1">
+                    variant="subtitle1"
+                  >
                     <Markdown escapeHtml={false} source={description} />
                   </Typography>
                 </CardContent>
@@ -80,7 +84,8 @@ function Home(): ReactElement {
           container
           direction="row"
           alignItems="center"
-          justifyContent="space-around">
+          justifyContent="space-around"
+        >
           {moduleFeatures.map(
             ({ title, description, icon }: Feature, key: number) => (
               <Grid
@@ -89,12 +94,14 @@ function Home(): ReactElement {
                 item
                 xl={4}
                 md={6}
-                xs={12}>
+                xs={12}
+              >
                 <Link
                   href={{
                     pathname: "/docs/modules",
                     query: { endpoint: moduleFeaturesKeys[key] },
-                  }}>
+                  }}
+                >
                   <CardActionArea>
                     <Icon
                       color={theme.palette.text.primary}
@@ -109,7 +116,8 @@ function Home(): ReactElement {
                       <Typography
                         color="textSecondary"
                         component="span"
-                        variant="subtitle1">
+                        variant="subtitle1"
+                      >
                         {description}
                       </Typography>
                     </CardContent>
@@ -125,14 +133,16 @@ function Home(): ReactElement {
         </Typography>
         <a
           href="https://github.com/timmo001/system-bridge/discussions"
-          target="_blank">
+          target="_blank"
+        >
           <CardContent>
             <CardActionArea>
               <Grid
                 container
                 direction="row"
                 alignItems="center"
-                justifyContent="space-evenly">
+                justifyContent="space-evenly"
+              >
                 <Grid item>
                   <Icon
                     color={theme.palette.text.primary}
@@ -149,7 +159,8 @@ function Home(): ReactElement {
                     className={classes.gridText}
                     color="textPrimary"
                     component="span"
-                    variant="body1">
+                    variant="body1"
+                  >
                     Participate in discussions and get help here.
                   </Typography>
                 </Grid>
@@ -159,14 +170,16 @@ function Home(): ReactElement {
         </a>
         <a
           href="https://github.com/timmo001/system-bridge/issues"
-          target="_blank">
+          target="_blank"
+        >
           <CardContent>
             <CardActionArea>
               <Grid
                 container
                 direction="row"
                 alignItems="center"
-                justifyContent="space-evenly">
+                justifyContent="space-evenly"
+              >
                 <Grid item>
                   <Icon
                     color={theme.palette.text.primary}
@@ -183,7 +196,8 @@ function Home(): ReactElement {
                     className={classes.gridText}
                     color="textPrimary"
                     component="span"
-                    variant="body1">
+                    variant="body1"
+                  >
                     Thought of a feature that could be added?
                     <br />
                     Found an issue?
@@ -202,7 +216,8 @@ function Home(): ReactElement {
                 container
                 direction="row"
                 alignItems="center"
-                justifyContent="space-evenly">
+                justifyContent="space-evenly"
+              >
                 <Grid item>
                   <Icon
                     color={theme.palette.text.primary}
@@ -219,7 +234,8 @@ function Home(): ReactElement {
                     className={classes.gridText}
                     color="textPrimary"
                     component="span"
-                    variant="body1">
+                    variant="body1"
+                  >
                     Want to make a change? Want to browse the source code? It's
                     here.
                   </Typography>
