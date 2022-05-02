@@ -81,7 +81,7 @@ function WebSocket(): ReactElement {
       >
         <Container className={classes.main} component="article" maxWidth="lg">
           <Typography component="h1" variant="h2">
-          Install
+            Install
           </Typography>
           <TabContext value={currentTab}>
             <Grid
