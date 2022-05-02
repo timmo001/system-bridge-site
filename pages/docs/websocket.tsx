@@ -6,7 +6,6 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import {
   Container,
@@ -16,13 +15,11 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+import { createStyles, withStyles } from "@mui/styles";
 import { TabContext, TabList } from "@mui/lab";
-import createStyles from "@mui/styles/createStyles";
-import withStyles from "@mui/styles/withStyles";
-// eslint-disable-next-line import/no-named-as-default
-import Icon from "@mdi/react";
+import { Icon } from "@mdi/react";
 
-import { websocketData, WebsocketDescription } from "assets/data/websocket";
+import { websocketItems, WebsocketDescription } from "assets/data/websocket";
 import Layout from "components/Layout";
 import Markdown from "components/Markdown";
 import useStyles from "assets/jss/components/layout";
@@ -66,7 +63,7 @@ function WebSocket(): ReactElement {
   }
 
   const { title, docs, icon }: WebsocketDescription = useMemo(
-    () => websocketData[currentTab],
+    () => websocketItems[currentTab],
     [currentTab]
   );
 
@@ -102,16 +99,16 @@ function WebSocket(): ReactElement {
                   variant="scrollable"
                   onChange={handleChangeTab}
                 >
-                  {Object.keys(websocketData).map((key: string) => (
+                  {Object.keys(websocketItems).map((key: string) => (
                     <StyledTab
                       key={key}
-                      label={websocketData[key].title}
+                      label={websocketItems[key].title}
                       icon={
                         <Icon
                           color={theme.palette.text.primary}
-                          path={websocketData[key].icon}
+                          path={websocketItems[key].icon}
                           size={1}
-                          title={websocketData[key].title}
+                          title={websocketItems[key].title}
                         />
                       }
                       value={key}
@@ -156,12 +153,5 @@ function WebSocket(): ReactElement {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {},
-    revalidate: 1,
-  };
-};
 
 export default WebSocket;

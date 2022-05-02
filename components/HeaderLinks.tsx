@@ -20,6 +20,32 @@ function HeaderLinks(): ReactElement {
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
+        <Link href="/docs/install">
+          <Button variant="text" className={classes.navLink}>
+            <span className={classes.listItemText}>Install</span>
+          </Button>
+        </Link>
+        <Link href="/docs/running">
+          <Button variant="text" className={classes.navLink}>
+            <span className={classes.listItemText}>Running</span>
+          </Button>
+        </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Link href="/docs/cli">
+          <Button variant="text" className={classes.navLink}>
+            <span className={classes.listItemText}>CLI</span>
+          </Button>
+        </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Link href="/docs/modules">
+          <Button variant="text" className={classes.navLink}>
+            <span className={classes.listItemText}>Modules</span>
+          </Button>
+        </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
         <Link href="/docs/api">
           <Button variant="text" className={classes.navLink}>
             <span className={classes.listItemText}>API</span>
@@ -30,13 +56,6 @@ function HeaderLinks(): ReactElement {
         <Link href="/docs/websocket">
           <Button variant="text" className={classes.navLink}>
             <span className={classes.listItemText}>WebSocket</span>
-          </Button>
-        </Link>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Link href="/docs/mqtt">
-          <Button variant="text" className={classes.navLink}>
-            <span className={classes.listItemText}>MQTT</span>
           </Button>
         </Link>
       </ListItem>

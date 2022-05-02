@@ -3,23 +3,23 @@ import { Container, Grid, Typography } from "@mui/material";
 
 import Layout from "components/Layout";
 import Markdown from "components/Markdown";
-import mdFaq from "assets/data/faq.md";
+import mdContent from "assets/data/install.md";
 import useStyles from "assets/jss/components/layout";
 
-function Faq(): ReactElement {
+function Install(): ReactElement {
   const classes = useStyles();
 
   return (
     <>
       <Layout
         classes={classes}
-        title="FAQ"
-        url="https://system-bridge.timmo.dev/faq"
+        title="Install"
+        url="https://system-bridge.timmo.dev/docs/install"
         description="A bridge for your systems."
       >
         <Container className={classes.main} component="article" maxWidth="lg">
           <Typography component="h1" variant="h2">
-            FAQ
+            Install
           </Typography>
           <Grid
             container
@@ -28,8 +28,8 @@ function Faq(): ReactElement {
             justifyContent="flex-start"
             spacing={2}
           >
-            <Grid item xs>
-              <Markdown escapeHtml={false} source={mdFaq} />
+            <Grid item xs={12}>
+              <Markdown escapeHtml={false} source={mdContent} />
             </Grid>
           </Grid>
         </Container>
@@ -38,4 +38,4 @@ function Faq(): ReactElement {
   );
 }
 
-export default Faq;
+export default Install;

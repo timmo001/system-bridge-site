@@ -6,7 +6,6 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import {
   Container,
@@ -16,16 +15,14 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+import { createStyles, withStyles } from "@mui/styles";
 import { TabContext, TabList } from "@mui/lab";
-import createStyles from "@mui/styles/createStyles";
-import withStyles from "@mui/styles/withStyles";
-// eslint-disable-next-line import/no-named-as-default
-import Icon from "@mdi/react";
+import { Icon } from "@mdi/react";
 
-import { mqttData, MqttDescription } from "assets/data/mqtt";
+import { ModuleDescription, moduleItems } from "assets/data/modules";
 import Layout from "components/Layout";
-import Markdown from "components/Markdown";
 import useStyles from "assets/jss/components/layout";
+import Markdown from "components/Markdown";
 
 interface StyledTabProps {
   label: string;
@@ -46,27 +43,27 @@ const StyledTab = withStyles((theme: Theme) =>
   })
 )((props: StyledTabProps) => <Tab disableRipple {...props} />);
 
-function Mqtt(): ReactElement {
+function Modules(): ReactElement {
   const router = useRouter();
-  const { id } = router.query;
+  const { endpoint } = router.query;
 
-  const [currentTab, setCurrentTab] = useState<string>("receivingData");
+  const [currentTab, setCurrentTab] = useState<string>("battery");
 
   useEffect(() => {
-    setCurrentTab(typeof id === "string" ? id : "receivingData");
+    setCurrentTab(typeof endpoint === "string" ? endpoint : "battery");
     ref.current.scrollIntoView({ behavior: "smooth" });
-  }, [id]);
+  }, [endpoint]);
 
   const ref = useRef(null);
 
   function handleChangeTab(_event: ChangeEvent, value: string): void {
     setCurrentTab(value);
     ref.current.scrollIntoView({ behavior: "smooth" });
-    router.push({ query: { id: value } }, null, { shallow: true });
+    router.push({ query: { endpoint: value } }, null, { shallow: true });
   }
 
-  const { title, docs, icon }: MqttDescription = useMemo(
-    () => mqttData[currentTab],
+  const { title, docs, icon }: ModuleDescription = useMemo(
+    () => moduleItems[currentTab],
     [currentTab]
   );
 
@@ -78,13 +75,13 @@ function Mqtt(): ReactElement {
       <div ref={ref} />
       <Layout
         classes={classes}
-        title="Mqtt"
-        url="https://system-bridge.timmo.dev/docs/mqtt"
+        title="Modules"
+        url="https://system-bridge.timmo.dev/docs/modules"
         description="A bridge for your systems."
       >
         <Container className={classes.main} component="article" maxWidth="lg">
           <Typography component="h1" variant="h2">
-            MQTT
+            Modules
           </Typography>
           <TabContext value={currentTab}>
             <Grid
@@ -102,16 +99,16 @@ function Mqtt(): ReactElement {
                   variant="scrollable"
                   onChange={handleChangeTab}
                 >
-                  {Object.keys(mqttData).map((key: string) => (
+                  {Object.keys(moduleItems).map((key: string) => (
                     <StyledTab
                       key={key}
-                      label={mqttData[key].title}
+                      label={moduleItems[key].title}
                       icon={
                         <Icon
                           color={theme.palette.text.primary}
-                          path={mqttData[key].icon}
+                          path={moduleItems[key].icon}
                           size={1}
-                          title={mqttData[key].title}
+                          title={title}
                         />
                       }
                       value={key}
@@ -157,11 +154,4 @@ function Mqtt(): ReactElement {
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {},
-    revalidate: 1,
-  };
-};
-
-export default Mqtt;
+export default Modules;

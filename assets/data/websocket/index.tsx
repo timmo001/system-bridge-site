@@ -1,9 +1,9 @@
 import { mdiDatabaseSearch, mdiDataMatrix, mdiPen } from "@mdi/js";
 
 import { GenericObject } from "components/Types";
-import mdGetData from "assets/data/websocket/get-data.md";
-import mdReceivingData from "assets/data/websocket/receiving-data.md";
-import mdRegisterListener from "assets/data/websocket/register-listener.md";
+import mdDataGet from "assets/data/websocket/items/data-get.md";
+import mdDataReceive from "assets/data/websocket/items/data-receive.md";
+import mdDataRegisterListener from "assets/data/websocket/items/data-register-listener.md";
 
 export interface WebsocketDescription {
   title: string;
@@ -11,20 +11,20 @@ export interface WebsocketDescription {
   docs: string;
 }
 
-export const websocketData: GenericObject<WebsocketDescription> = {
+export const websocketItems: GenericObject<WebsocketDescription> = {
   registerListener: {
     title: "Registering as a Listener",
     icon: mdiPen,
-    docs: mdRegisterListener,
+    docs: mdDataRegisterListener,
   },
   getData: {
     title: "Requesting Data",
     icon: mdiDatabaseSearch,
-    docs: mdGetData,
+    docs: mdDataGet,
   },
   receivingData: {
     title: "Receiving Data",
     icon: mdiDataMatrix,
-    docs: mdReceivingData,
+    docs: mdDataReceive,
   },
 };

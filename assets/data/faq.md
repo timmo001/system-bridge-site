@@ -1,9 +1,10 @@
-## I'm missing some sensor data
+## How do I find my API key
 
-Some sensor data requires the application to be run as a administrator.
+You can get your API key using the [CLI](https://system-bridge.timmo.dev/docs/cli) to output your API key.
 
-For example, in Windows, you may not get cpu current speed and
-temperature data without running as admin.
+## Accessing logs
+
+You can access logs via the system tray icon or via the [CLI](https://system-bridge.timmo.dev/docs/cli).
 
 ## I'd like to contribute to the project
 

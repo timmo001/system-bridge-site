@@ -48,7 +48,7 @@ function Layout(props: LayoutProps): ReactElement {
       <Header
         {...props}
         changeColorOnScroll={{
-          height: 200,
+          height: 24,
           color: "primary",
         }}
         color="transparent"
