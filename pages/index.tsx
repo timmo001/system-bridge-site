@@ -107,12 +107,6 @@ function Home(): ReactElement {
                       <Typography component="h2" variant="h4" gutterBottom>
                         {title}
                       </Typography>
-                      <Typography
-                        color="textSecondary"
-                        component="span"
-                        variant="subtitle1">
-                        {description}
-                      </Typography>
                     </CardContent>
                   </CardActionArea>
                 </Link>
