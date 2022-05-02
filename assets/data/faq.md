@@ -1,10 +1,10 @@
 ## How do I find my API key
 
-You can get your API key using the [CLI](https://system-bridge.timmo.dev/docs/cli#api-key) to output your API key.
+You can get your API key using the [CLI](https://system-bridge.timmo.dev/docs/cli) to output your API key.
 
 ## Accessing logs
 
-TODO
+You can access logs via the system tray icon or via the [CLI](https://system-bridge.timmo.dev/docs/cli).
 
 ## I'd like to contribute to the project
 
