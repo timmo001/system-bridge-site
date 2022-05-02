@@ -1,6 +1,7 @@
 import {
   mdiBatteryCharging,
   mdiCpu64Bit,
+  mdiDesktopClassic,
   mdiDesktopTower,
   mdiExpansionCard,
   mdiHarddisk,
@@ -70,7 +71,7 @@ export const moduleItems: GenericObject<ModuleDescription> = {
   },
   sensor: {
     title: "Sensors",
-    icon: mdiDesktopTower,
+    icon: mdiDesktopClassic,
     docs: mdSensor,
   },
   system: {
