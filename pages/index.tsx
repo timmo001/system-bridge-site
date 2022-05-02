@@ -230,8 +230,7 @@ function Home(): ReactElement {
                     component="span"
                     variant="body1"
                   >
-                    Want to make a change? Want to browse the source code? It's
-                    here.
+                    The source code for this project is available on GitHub.
                   </Typography>
                 </Grid>
               </Grid>
