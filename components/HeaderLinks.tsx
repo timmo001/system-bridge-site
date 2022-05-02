@@ -27,6 +27,13 @@ function HeaderLinks(): ReactElement {
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
+        <Link href="/docs/cli">
+          <Button variant="text" className={classes.navLink}>
+            <span className={classes.listItemText}>CLI</span>
+          </Button>
+        </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
         <Link href="/docs/modules">
           <Button variant="text" className={classes.navLink}>
             <span className={classes.listItemText}>Modules</span>
