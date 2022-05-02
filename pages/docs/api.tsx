@@ -47,10 +47,10 @@ function API(): ReactElement {
   const router = useRouter();
   const { id } = router.query;
 
-  const [currentTab, setCurrentTab] = useState<string>("something");
+  const [currentTab, setCurrentTab] = useState<string>("data");
 
   useEffect(() => {
-    setCurrentTab(typeof id === "string" ? id : "something");
+    setCurrentTab(typeof id === "string" ? id : "data");
     ref.current.scrollIntoView({ behavior: "smooth" });
   }, [id]);
 
@@ -94,7 +94,7 @@ function API(): ReactElement {
               <Grid item>
                 <TabList
                   className={classes.verticalTabs}
-                  aria-label="Services"
+                  aria-label="Endpoints"
                   orientation="vertical"
                   variant="scrollable"
                   onChange={handleChangeTab}

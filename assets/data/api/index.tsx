@@ -1,7 +1,8 @@
-import { mdiNetworkOutline } from "@mdi/js";
+import { mdiDatabase } from "@mdi/js";
 
 import { GenericObject } from "components/Types";
-import mdPlaceholder from "assets/data/api/items/placeholder.md";
+import mdData from "assets/data/api/items/data.md";
+import mdDataKey from "assets/data/api/items/data-key.md";
 
 export interface APIDescription {
   title: string;
@@ -10,9 +11,14 @@ export interface APIDescription {
 }
 
 export const apiItems: GenericObject<APIDescription> = {
-  something: {
-    title: "Something",
-    icon: mdiNetworkOutline,
-    docs: mdPlaceholder,
+  data: {
+    title: "Data",
+    icon: mdiDatabase,
+    docs: mdData,
+  },
+  dataByKey: {
+    title: "Data by key",
+    icon: mdiDatabase,
+    docs: mdDataKey,
   },
 };
