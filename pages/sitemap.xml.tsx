@@ -22,11 +22,13 @@ export async function getServerSideProps({
   res,
 }): Promise<{ [key: string]: unknown }> {
   const data: PageType[] = [];
-  data.push({ path: "/", updated: "2020-07-01T00:00:00.000Z" });
-  data.push({ path: "/docs/api", updated: "2021-08-03T00:00:00.000Z" });
-  data.push({ path: "/docs/mqtt", updated: "2021-08-03T00:00:00.000Z" });
-  data.push({ path: "/docs/websocket", updated: "2021-08-03T00:00:00.000Z" });
-  data.push({ path: "/faq", updated: "2021-08-03T00:00:00.000Z" });
+  data.push({ path: "/", updated: "2022-05-02T00:00:00.000Z" });
+  data.push({ path: "/docs/api", updated: "2022-05-02T00:00:00.000Z" });
+  data.push({ path: "/docs/cli", updated: "2022-05-02T00:00:00.000Z" });
+  data.push({ path: "/docs/install", updated: "2022-05-02T00:00:00.000Z" });
+  data.push({ path: "/docs/modules", updated: "2022-05-02T00:00:00.000Z" });
+  data.push({ path: "/docs/websocket", updated: "2022-05-02T00:00:00.000Z" });
+  data.push({ path: "/faq", updated: "2022-05-02T00:00:00.000Z" });
 
   const sitemap = generateSitemap(data, "https://system-bridge.timmo.dev");
 
