@@ -2,7 +2,7 @@
 
 The System Bridge website, written using Material UI Next.js/React in TypeScript.
 
-![Logo](https://raw.githubusercontent.com/timmo001/system-bridge/master/public/system-bridge-rect.png)
+![Logo](https://raw.githubusercontent.com/timmo001/system-bridge/master/resources/system-bridge-rect.png)
 
 ## Site
 
