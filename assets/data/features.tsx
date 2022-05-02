@@ -18,23 +18,23 @@ export const userFeatures: Array<Feature> = [
   {
     title: "System Information",
     description:
-      "Access your system's Audio, Battery, Bluetooth, CPU, Display, Filesystems, Graphics, Keyboard, Memory, Networking, OS, Process, System and USB information via the API.",
+      "Access your system's information via the data modules using the API/WebSocket.",
     icon: mdiInformationOutline,
   },
   {
-    title: "Send Commands and Open files and URLs",
+    title: "Open files and URLs",
     description:
-      "Automate your system by sending a command or opening a URL/path via the API.",
+      "Automate your system by opening a URL/path via the API/WebSocket.",
     icon: mdiCogs,
   },
   {
     title: "Send Notifications",
-    description: "Send system notifications via the API.",
+    description: "Send system notifications via the API/WebSocket.",
     icon: mdiBell,
   },
   {
     title: "Cross-Platform",
-    description: "Compatible with Windows, Mac and Linux.",
+    description: "Compatible with Windows and Linux.",
     icon: mdiDesktopTowerMonitor,
   },
   {
