@@ -1,4 +1,4 @@
-## How do I find my API key?
+## How do I find my API key
 
 You can get your API key using the [CLI](https://system-bridge.timmo.dev/docs/cli#api-key) to output your API key.
 
