@@ -1,6 +1,7 @@
 import {
   mdiDatabase,
   mdiDataMatrix,
+  mdiFileStarOutline,
   mdiKeyboardVariant,
   mdiNotificationClearAll,
 } from "@mdi/js";
@@ -10,6 +11,7 @@ import mdData from "assets/data/api/items/data.md";
 import mdDataKey from "assets/data/api/items/data-key.md";
 import mdKeyboard from "assets/data/api/items/keyboard.md";
 import mdNotification from "assets/data/api/items/notification.md";
+import mdOpen from "assets/data/api/items/open.md";
 
 export interface APIDescription {
   title: string;
@@ -38,5 +40,10 @@ export const apiItems: GenericObject<APIDescription> = {
     title: "Notification",
     icon: mdiNotificationClearAll,
     docs: mdNotification,
+  },
+  open: {
+    title: "Open",
+    icon: mdiFileStarOutline,
+    docs: mdOpen,
   },
 };
