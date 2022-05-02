@@ -51,5 +51,6 @@ export const userFeatures: Array<Feature> = [
   },
 ];
 
-export const moduleFeatures: Array<ModuleDescription> = Object.values(moduleItems);
+export const moduleFeatures: Array<ModuleDescription> =
+  Object.values(moduleItems);
 export const moduleFeaturesKeys: Array<string> = Object.keys(moduleItems);
