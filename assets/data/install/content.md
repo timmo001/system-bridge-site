@@ -1,5 +1,7 @@
 ## Full installation
 
+See below for the full installation instructions. For a more detailed guide follow the detailed installation instructions.
+
 ### Windows
 
 Install [Python 3](https://www.python.org/downloads) including pip in the setup.
@@ -17,7 +19,7 @@ sudo apt install python3 python3-pip python3-setuptools python3-wheel
 python -m pip install --upgrade systembridgeshared systembridgebackend systembridgecli systembridgefrontend systembridgegui
 ```
 
-## Explained installation
+## Detailed installation
 
 ### Prerequisites
 

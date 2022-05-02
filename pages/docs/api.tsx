@@ -43,7 +43,7 @@ const StyledTab = withStyles((theme: Theme) =>
   })
 )((props: StyledTabProps) => <Tab disableRipple {...props} />);
 
-function WebSocket(): ReactElement {
+function API(): ReactElement {
   const router = useRouter();
   const { id } = router.query;
 
@@ -154,4 +154,4 @@ function WebSocket(): ReactElement {
   );
 }
 
-export default WebSocket;
+export default API;

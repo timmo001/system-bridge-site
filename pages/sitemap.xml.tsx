@@ -27,6 +27,7 @@ export async function getServerSideProps({
   data.push({ path: "/docs/cli", updated: "2022-05-02T00:00:00.000Z" });
   data.push({ path: "/docs/install", updated: "2022-05-02T00:00:00.000Z" });
   data.push({ path: "/docs/modules", updated: "2022-05-02T00:00:00.000Z" });
+  data.push({ path: "/docs/running", updated: "2022-05-02T00:00:00.000Z" });
   data.push({ path: "/docs/websocket", updated: "2022-05-02T00:00:00.000Z" });
   data.push({ path: "/faq", updated: "2022-05-02T00:00:00.000Z" });
 

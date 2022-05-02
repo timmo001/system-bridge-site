@@ -6,7 +6,7 @@ import Markdown from "components/Markdown";
 import mdContent from "assets/data/install/content.md";
 import useStyles from "assets/jss/components/layout";
 
-function WebSocket(): ReactElement {
+function Install(): ReactElement {
   const classes = useStyles();
 
   return (
@@ -36,4 +36,4 @@ function WebSocket(): ReactElement {
   );
 }
 
-export default WebSocket;
+export default Install;
