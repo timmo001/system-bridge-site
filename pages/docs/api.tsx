@@ -77,7 +77,8 @@ function WebSocket(): ReactElement {
         classes={classes}
         title="API"
         url="https://system-bridge.timmo.dev/docs/api"
-        description="A bridge for your systems.">
+        description="A bridge for your systems."
+      >
         <Container className={classes.main} component="article" maxWidth="lg">
           <Typography component="h1" variant="h2">
             API
@@ -88,14 +89,16 @@ function WebSocket(): ReactElement {
               direction="row"
               alignItems="flex-start"
               justifyContent="flex-start"
-              spacing={2}>
+              spacing={2}
+            >
               <Grid item>
                 <TabList
                   className={classes.verticalTabs}
                   aria-label="Services"
                   orientation="vertical"
                   variant="scrollable"
-                  onChange={handleChangeTab}>
+                  onChange={handleChangeTab}
+                >
                   {Object.keys(apiItems).map((key: string) => (
                     <StyledTab
                       key={key}
@@ -118,12 +121,14 @@ function WebSocket(): ReactElement {
                   container
                   direction="row"
                   alignItems="flex-start"
-                  justifyContent="space-around">
+                  justifyContent="space-around"
+                >
                   <Grid
                     container
                     direction="row"
                     alignItems="flex-start"
-                    justifyContent="space-evenly">
+                    justifyContent="space-evenly"
+                  >
                     <Grid className={classes.name} item>
                       <Icon
                         color={theme.palette.text.primary}

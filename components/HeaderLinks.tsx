@@ -52,12 +52,14 @@ function HeaderLinks(): ReactElement {
       <ListItem className={classes.listItem}>
         <Tooltip
           title="Suggest a Feature / Report a Bug"
-          classes={{ tooltip: classes.tooltip }}>
+          classes={{ tooltip: classes.tooltip }}
+        >
           <Button
             variant="text"
             className={classes.navLink}
             href="https://github.com/timmo001/system-bridge/issues"
-            target="_blank">
+            target="_blank"
+          >
             <Icon
               color={theme.palette.text.primary}
               path={mdiFileDocumentMultiple}
@@ -69,12 +71,14 @@ function HeaderLinks(): ReactElement {
       <ListItem className={classes.listItem}>
         <Tooltip
           title="Discussions/Help"
-          classes={{ tooltip: classes.tooltip }}>
+          classes={{ tooltip: classes.tooltip }}
+        >
           <Button
             variant="text"
             className={classes.navLink}
             href="https://github.com/timmo001/system-bridge/discussions"
-            target="_blank">
+            target="_blank"
+          >
             <Icon
               color={theme.palette.text.primary}
               path={mdiForumOutline}
@@ -86,12 +90,14 @@ function HeaderLinks(): ReactElement {
       <ListItem className={classes.listItem}>
         <Tooltip
           title="Contribute to the Website/Documentation"
-          classes={{ tooltip: classes.tooltip }}>
+          classes={{ tooltip: classes.tooltip }}
+        >
           <Button
             variant="text"
             className={classes.navLink}
             href="https://github.com/timmo001/system-bridge-site"
-            target="_blank">
+            target="_blank"
+          >
             <Icon
               color={theme.palette.text.primary}
               path={mdiNotebookEditOutline}
@@ -103,12 +109,14 @@ function HeaderLinks(): ReactElement {
       <ListItem className={classes.listItem}>
         <Tooltip
           title="Contribute to the Application"
-          classes={{ tooltip: classes.tooltip }}>
+          classes={{ tooltip: classes.tooltip }}
+        >
           <Button
             variant="text"
             className={classes.navLink}
             href="https://github.com/timmo001/system-bridge"
-            target="_blank">
+            target="_blank"
+          >
             <Icon
               color={theme.palette.text.primary}
               path={mdiGithub}
