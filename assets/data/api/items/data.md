@@ -1,4 +1,4 @@
-_Get Data from data modules._
+_Get data from data modules._
 
 ## Request
 
