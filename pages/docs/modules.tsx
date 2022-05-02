@@ -62,7 +62,7 @@ function Modules(): ReactElement {
     router.push({ query: { endpoint: value } }, null, { shallow: true });
   }
 
-  const { title, description, docs, icon }: ModuleDescription = useMemo(
+  const { title, docs, icon }: ModuleDescription = useMemo(
     () => moduleItems[currentTab],
     [currentTab]
   );
@@ -140,14 +140,6 @@ function Modules(): ReactElement {
                     <Grid item xs>
                       <Typography component="h2" variant="h3" gutterBottom>
                         {title}
-                      </Typography>
-                      <Typography
-                        className={classes.gridText}
-                        color="textPrimary"
-                        component="span"
-                        variant="body1"
-                      >
-                        {description}
                       </Typography>
                       <Markdown escapeHtml={false} source={docs} />
                     </Grid>
