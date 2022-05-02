@@ -1,9 +1,15 @@
-import { mdiDatabase, mdiDataMatrix, mdiKeyboardVariant } from "@mdi/js";
+import {
+  mdiDatabase,
+  mdiDataMatrix,
+  mdiKeyboardVariant,
+  mdiNotificationClearAll,
+} from "@mdi/js";
 
 import { GenericObject } from "components/Types";
 import mdData from "assets/data/api/items/data.md";
 import mdDataKey from "assets/data/api/items/data-key.md";
 import mdKeyboard from "assets/data/api/items/keyboard.md";
+import mdNotification from "assets/data/api/items/notification.md";
 
 export interface APIDescription {
   title: string;
@@ -26,5 +32,11 @@ export const apiItems: GenericObject<APIDescription> = {
     title: "Keyboard",
     icon: mdiKeyboardVariant,
     docs: mdKeyboard,
+  },
+  // TODO: media
+  notification: {
+    title: "Notification",
+    icon: mdiNotificationClearAll,
+    docs: mdNotification,
   },
 };
