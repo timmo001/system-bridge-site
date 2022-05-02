@@ -10,12 +10,20 @@ import {
 } from "@mdi/js";
 
 import { GenericObject } from "components/Types";
-import { mdPlaceholder } from "assets/data/modules/items/placeholder.md";
+import mdBattery from "assets/data/modules/items/battery.md";
+import mdBridge from "assets/data/modules/items/bridge.md";
+import mdCPU from "assets/data/modules/items/cpu.md";
+import mdDisk from "assets/data/modules/items/disk.md";
+import mdDisplay from "assets/data/modules/items/display.md";
+import mdGPU from "assets/data/modules/items/gpu.md";
+import mdMemory from "assets/data/modules/items/memory.md";
+import mdNetwork from "assets/data/modules/items/network.md";
+import mdSensor from "assets/data/modules/items/sensor.md";
+import mdSystem from "assets/data/modules/items/system.md";
 
 export interface ModuleDescription {
   title: string;
   icon: string;
-  description: string;
   docs: string;
 }
 
@@ -23,61 +31,51 @@ export const moduleItems: GenericObject<ModuleDescription> = {
   battery: {
     title: "Battery",
     icon: mdiBatteryCharging,
-    description: "Battery level, capacity and configuration.",
-    docs: mdPlaceholder,
+    docs: mdBattery,
   },
   bridge: {
     title: "Bridges",
     icon: mdiBatteryCharging,
-    description: "Placeholder.",
-    docs: mdPlaceholder,
+    docs: mdBridge,
   },
   cpu: {
     title: "CPU",
     icon: mdiCpu64Bit,
-    description: "CPU usage, clock speed, and configuration.",
-    docs: mdPlaceholder,
+    docs: mdCPU,
   },
   disk: {
     title: "Disks",
     icon: mdiHarddisk,
-    description: "Disk information.",
-    docs: mdPlaceholder,
+    docs: mdDisk,
   },
   display: {
     title: "Display",
     icon: mdiMonitor,
-    description: "Display information.",
-    docs: mdPlaceholder,
+    docs: mdDisplay,
   },
   gpu: {
     title: "GPU",
     icon: mdiExpansionCard,
-    description: "Graphics card usage and configuration.",
-    docs: mdPlaceholder,
+    docs: mdGPU,
   },
   memory: {
     title: "Memory",
     icon: mdiMemory,
-    description: "Memory usage and configuration.",
-    docs: mdPlaceholder,
+    docs: mdMemory,
   },
   network: {
     title: "Network",
     icon: mdiNetworkOutline,
-    description: "Networking information.",
-    docs: mdPlaceholder,
+    docs: mdNetwork,
   },
   sensor: {
     title: "Sensors",
     icon: mdiDesktopTower,
-    description: "Get sensor data.",
-    docs: mdPlaceholder,
+    docs: mdSensor,
   },
   system: {
     title: "System",
     icon: mdiDesktopTower,
-    description: "Get system information.",
-    docs: mdPlaceholder,
+    docs: mdSystem,
   },
 };

@@ -83,12 +83,6 @@ function Modules(): ReactElement {
           <Typography component="h1" variant="h2">
             Modules
           </Typography>
-          <Typography color="textSecondary" component="h3" variant="subtitle1">
-            <Markdown
-              escapeHtml
-              source="All endpoints require an `api-key` header which can be generated and obtained from the app settings."
-            />
-          </Typography>
           <TabContext value={currentTab}>
             <Grid
               container
