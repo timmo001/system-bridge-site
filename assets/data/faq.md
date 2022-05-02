@@ -1,10 +1,3 @@
-## I'm missing some sensor data
-
-Some sensor data requires the application to be run as a administrator.
-
-For example, in Windows, you may not get cpu current speed and
-temperature data without running as admin.
-
 ## I'd like to contribute to the project
 
 There are many ways to contribute to this project. You don't have to

@@ -6,7 +6,6 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import {
   Container,
@@ -16,16 +15,14 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+import { createStyles, withStyles } from "@mui/styles";
 import { TabContext, TabList } from "@mui/lab";
-import createStyles from "@mui/styles/createStyles";
-import withStyles from "@mui/styles/withStyles";
-// eslint-disable-next-line import/no-named-as-default
-import Icon from "@mdi/react";
+import { Icon } from "@mdi/react";
 
-import { APIServiceDescription, apiServices } from "assets/data/api";
+import { apiItems, APIDescription } from "assets/data/api";
 import Layout from "components/Layout";
-import useStyles from "assets/jss/components/layout";
 import Markdown from "components/Markdown";
+import useStyles from "assets/jss/components/layout";
 
 interface StyledTabProps {
   label: string;
@@ -46,27 +43,27 @@ const StyledTab = withStyles((theme: Theme) =>
   })
 )((props: StyledTabProps) => <Tab disableRipple {...props} />);
 
-function API(): ReactElement {
+function WebSocket(): ReactElement {
   const router = useRouter();
-  const { endpoint } = router.query;
+  const { id } = router.query;
 
-  const [currentTab, setCurrentTab] = useState<string>("audio");
+  const [currentTab, setCurrentTab] = useState<string>("something");
 
   useEffect(() => {
-    setCurrentTab(typeof endpoint === "string" ? endpoint : "audio");
+    setCurrentTab(typeof id === "string" ? id : "something");
     ref.current.scrollIntoView({ behavior: "smooth" });
-  }, [endpoint]);
+  }, [id]);
 
   const ref = useRef(null);
 
   function handleChangeTab(_event: ChangeEvent, value: string): void {
     setCurrentTab(value);
     ref.current.scrollIntoView({ behavior: "smooth" });
-    router.push({ query: { endpoint: value } }, null, { shallow: true });
+    router.push({ query: { id: value } }, null, { shallow: true });
   }
 
-  const { title, description, docs, icon }: APIServiceDescription = useMemo(
-    () => apiServices[currentTab],
+  const { title, docs, icon }: APIDescription = useMemo(
+    () => apiItems[currentTab],
     [currentTab]
   );
 
@@ -80,17 +77,10 @@ function API(): ReactElement {
         classes={classes}
         title="API"
         url="https://system-bridge.timmo.dev/docs/api"
-        description="A bridge for your systems."
-      >
+        description="A bridge for your systems.">
         <Container className={classes.main} component="article" maxWidth="lg">
           <Typography component="h1" variant="h2">
             API
-          </Typography>
-          <Typography color="textSecondary" component="h3" variant="subtitle1">
-            <Markdown
-              escapeHtml
-              source="All endpoints require an `api-key` header which can be generated and obtained from the app settings."
-            />
           </Typography>
           <TabContext value={currentTab}>
             <Grid
@@ -98,26 +88,24 @@ function API(): ReactElement {
               direction="row"
               alignItems="flex-start"
               justifyContent="flex-start"
-              spacing={2}
-            >
+              spacing={2}>
               <Grid item>
                 <TabList
                   className={classes.verticalTabs}
                   aria-label="Services"
                   orientation="vertical"
                   variant="scrollable"
-                  onChange={handleChangeTab}
-                >
-                  {Object.keys(apiServices).map((key: string) => (
+                  onChange={handleChangeTab}>
+                  {Object.keys(apiItems).map((key: string) => (
                     <StyledTab
                       key={key}
-                      label={apiServices[key].title}
+                      label={apiItems[key].title}
                       icon={
                         <Icon
                           color={theme.palette.text.primary}
-                          path={apiServices[key].icon}
+                          path={apiItems[key].icon}
                           size={1}
-                          title={title}
+                          title={apiItems[key].title}
                         />
                       }
                       value={key}
@@ -130,14 +118,12 @@ function API(): ReactElement {
                   container
                   direction="row"
                   alignItems="flex-start"
-                  justifyContent="space-around"
-                >
+                  justifyContent="space-around">
                   <Grid
                     container
                     direction="row"
                     alignItems="flex-start"
-                    justifyContent="space-evenly"
-                  >
+                    justifyContent="space-evenly">
                     <Grid className={classes.name} item>
                       <Icon
                         color={theme.palette.text.primary}
@@ -149,14 +135,6 @@ function API(): ReactElement {
                     <Grid item xs>
                       <Typography component="h2" variant="h3" gutterBottom>
                         {title}
-                      </Typography>
-                      <Typography
-                        className={classes.gridText}
-                        color="textPrimary"
-                        component="span"
-                        variant="body1"
-                      >
-                        {description}
                       </Typography>
                       <Markdown escapeHtml={false} source={docs} />
                     </Grid>
@@ -171,11 +149,4 @@ function API(): ReactElement {
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {},
-    revalidate: 1,
-  };
-};
-
-export default API;
+export default WebSocket;

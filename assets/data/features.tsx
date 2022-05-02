@@ -6,7 +6,7 @@ import {
   mdiHomeAssistant,
   mdiInformationOutline,
 } from "@mdi/js";
-import { apiServices } from "./api";
+import { moduleItems } from "assets/data/modules";
 
 export interface Feature {
   title: string;
@@ -51,5 +51,5 @@ export const userFeatures: Array<Feature> = [
   },
 ];
 
-export const apiFeatures: Array<Feature> = Object.values(apiServices);
-export const apiFeaturesKeys: Array<string> = Object.keys(apiServices);
+export const moduleFeatures: Array<Feature> = Object.values(moduleItems);
+export const moduleFeaturesKeys: Array<string> = Object.keys(moduleItems);
