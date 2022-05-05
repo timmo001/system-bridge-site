@@ -22,7 +22,6 @@ import { Icon } from "@mdi/react";
 import { websocketItems, WebsocketDescription } from "assets/data/websocket";
 import Layout from "components/Layout";
 import Markdown from "components/Markdown";
-import useStyles from "assets/jss/components/layout";
 
 interface StyledTabProps {
   label: string;
@@ -67,19 +66,21 @@ function WebSocket(): ReactElement {
     [currentTab]
   );
 
-  const classes = useStyles();
   const theme = useTheme();
 
   return (
     <>
       <div ref={ref} />
       <Layout
-        classes={classes}
         title="WebSocket"
         url="https://system-bridge.timmo.dev/docs/websocket"
         description="A bridge for your systems."
       >
-        <Container className={classes.main} component="article" maxWidth="lg">
+        <Container
+          component="article"
+          maxWidth="lg"
+          sx={{ position: "relative", marginTop: 48 }}
+        >
           <Typography component="h1" variant="h2">
             WebSocket
           </Typography>
@@ -93,11 +94,14 @@ function WebSocket(): ReactElement {
             >
               <Grid item>
                 <TabList
-                  className={classes.verticalTabs}
                   aria-label="Services"
                   orientation="vertical"
                   variant="scrollable"
                   onChange={handleChangeTab}
+                  sx={{
+                    borderRight: `1px solid ${theme.palette.divider}`,
+                    marginTop: 80,
+                  }}
                 >
                   {Object.keys(websocketItems).map((key: string) => (
                     <StyledTab
@@ -105,6 +109,7 @@ function WebSocket(): ReactElement {
                       label={websocketItems[key].title}
                       icon={
                         <Icon
+                          id={`websocket-${key}`}
                           color={theme.palette.text.primary}
                           path={websocketItems[key].icon}
                           size={1}
@@ -129,8 +134,9 @@ function WebSocket(): ReactElement {
                     alignItems="flex-start"
                     justifyContent="space-evenly"
                   >
-                    <Grid className={classes.name} item>
+                    <Grid item sx={{ marginTop: 80 }}>
                       <Icon
+                        id={`websocket-${currentTab}`}
                         color={theme.palette.text.primary}
                         path={icon}
                         size={12}

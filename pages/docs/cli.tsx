@@ -4,20 +4,20 @@ import { Container, Grid, Typography } from "@mui/material";
 import Layout from "components/Layout";
 import Markdown from "components/Markdown";
 import mdContent from "assets/data/cli.md";
-import useStyles from "assets/jss/components/layout";
 
 function CLI(): ReactElement {
-  const classes = useStyles();
-
   return (
     <>
       <Layout
-        classes={classes}
         title="CLI"
         url="https://system-bridge.timmo.dev/docs/cli"
         description="A bridge for your systems."
       >
-        <Container className={classes.main} component="article" maxWidth="lg">
+        <Container
+          component="article"
+          maxWidth="lg"
+          sx={{ position: "relative", marginTop: 48 }}
+        >
           <Typography component="h1" variant="h2">
             CLI
           </Typography>

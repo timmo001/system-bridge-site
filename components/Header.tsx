@@ -1,19 +1,19 @@
-import React, { ReactElement, useEffect, useState } from "react";
+import React, { ReactElement, useState } from "react";
 import Link from "next/link";
 import {
   AppBar,
+  Box,
   Button,
   Drawer,
+  Grid,
   Hidden,
   IconButton,
   PropTypes,
   Toolbar,
   Typography,
+  useTheme,
 } from "@mui/material";
 import { Menu } from "@mui/icons-material";
-import clsx from "clsx";
-
-import useStyles from "assets/jss/components/header";
 
 type ColorExpanded = PropTypes.Color | "transparent";
 
@@ -31,59 +31,46 @@ interface HeaderProps {
 }
 
 function Header(props: HeaderProps): ReactElement {
-  const classes = useStyles();
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    if (props.changeColorOnScroll) {
-      window.addEventListener("scroll", headerColorChange);
-    }
-    return function cleanup() {
-      if (props.changeColorOnScroll) {
-        window.removeEventListener("scroll", headerColorChange);
-      }
-    };
-  }, []);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  const headerColorChange = () => {
-    const { color, changeColorOnScroll } = props;
-    const windowsScrollTop = window.pageYOffset;
-    if (windowsScrollTop > changeColorOnScroll.height) {
-      document.body
-        .getElementsByTagName("header")[0]
-        .classList.remove(classes[color]);
-      document.body
-        .getElementsByTagName("header")[0]
-        .classList.add(classes[changeColorOnScroll.color]);
-    } else {
-      document.body
-        .getElementsByTagName("header")[0]
-        .classList.add(classes[color]);
-      document.body
-        .getElementsByTagName("header")[0]
-        .classList.remove(classes[changeColorOnScroll.color]);
-    }
-  };
+  const { color, rightLinks } = props;
 
-  const { color, rightLinks, fixed, absolute } = props;
+  const theme = useTheme();
   return (
-    <AppBar
-      className={clsx({
-        [classes.appBar]: true,
-        [classes[color]]: color,
-        [classes.absolute]: absolute,
-        [classes.fixed]: fixed,
-      })}
-      color={color}
-    >
-      <Toolbar className={classes.container}>
+    <AppBar color={color}>
+      <Toolbar
+        sx={{
+          minHeight: 50,
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "space-between",
+          display: "flex",
+          flexWrap: "nowrap",
+        }}
+      >
         <Link href="/">
           <Button>
-            <Typography className={classes.title} component="h1" variant="h4">
+            <Typography
+              component="h1"
+              variant="h4"
+              sx={{
+                lineHeight: "30px",
+                borderRadius: 3,
+                marginTop: 0,
+                textTransform: "none",
+                userSelect: "none",
+                color: theme.palette.primary.contrastText,
+                padding: "8px 16px",
+                letterSpacing: "unset",
+                "&:hover,&:focus": {
+                  background: "transparent",
+                },
+              }}
+            >
               System Bridge
             </Typography>
           </Button>
@@ -107,12 +94,9 @@ function Header(props: HeaderProps): ReactElement {
           variant="temporary"
           anchor={"right"}
           open={mobileOpen}
-          classes={{
-            paper: classes.drawerPaper,
-          }}
           onClose={handleDrawerToggle}
         >
-          <div className={classes.appResponsive}>{rightLinks}</div>
+          {rightLinks}
         </Drawer>
       </Hidden>
     </AppBar>

@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 
 import { MediaType } from "./Types";
-import useStyles from "assets/jss/components/layout";
 
 interface SliderProps {
   hideCaption?: boolean;
@@ -32,22 +31,20 @@ function Image({
   const openMediaDialog = () => setShowDialog(true);
   const closeMediaDialog = () => setShowDialog(false);
 
-  const classes = useStyles();
-
   return (
     <Fragment>
       <ButtonBase
-        className={!showAsImage ? classes.galleryItem : ""}
+        sx={{ width: !showAsImage ? "100%" : "initial" }}
         onClick={openMediaDialog}
       >
-        <Card className={classes.galleryItemCard} elevation={hidePaper ? 0 : 1}>
+        <Card sx={{ width: "100%" }} elevation={hidePaper ? 0 : 1}>
           {showAsImage ? (
             <img src={media.url} alt={media.alternativeText} />
           ) : (
             <CardMedia
-              className={classes.galleryItemMedia}
               image={media.url}
               title={media.alternativeText}
+              sx={{ width: "100%", height: 420, backgroundSize: "contain" }}
             />
           )}
           {!hideTitle ? (

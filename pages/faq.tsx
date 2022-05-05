@@ -4,20 +4,20 @@ import { Container, Grid, Typography } from "@mui/material";
 import Layout from "components/Layout";
 import Markdown from "components/Markdown";
 import mdFaq from "assets/data/faq.md";
-import useStyles from "assets/jss/components/layout";
 
 function Faq(): ReactElement {
-  const classes = useStyles();
-
   return (
     <>
       <Layout
-        classes={classes}
         title="FAQ"
         url="https://system-bridge.timmo.dev/faq"
         description="A bridge for your systems."
       >
-        <Container className={classes.main} component="article" maxWidth="lg">
+        <Container
+          component="article"
+          maxWidth="lg"
+          sx={{ position: "relative", marginTop: 48 }}
+        >
           <Typography component="h1" variant="h2">
             FAQ
           </Typography>

@@ -19,20 +19,21 @@ import {
 import Layout from "components/Layout";
 import Link from "next/link";
 import Markdown from "components/Markdown";
-import useStyles from "assets/jss/components/layout";
 import { ModuleDescription } from "assets/data/modules";
 
 function Home(): ReactElement {
-  const classes = useStyles();
   const theme = useTheme();
 
   return (
     <Layout
-      classes={classes}
       url="https://system-bridge.timmo.dev"
       description="A bridge for your systems."
     >
-      <Container className={classes.main} component="article" maxWidth="lg">
+      <Container
+        component="article"
+        maxWidth="lg"
+        sx={{ position: "relative", marginTop: 48 }}
+      >
         <Typography color="textPrimary" component="h2" variant="h2">
           A bridge for your systems
         </Typography>
@@ -49,13 +50,14 @@ function Home(): ReactElement {
             ({ title, description, icon }: Feature, key: number) => (
               <Grid
                 key={key}
-                className={classes.gridItem}
                 item
                 xl={4}
                 md={6}
                 xs={12}
+                sx={{ textAlign: "center" }}
               >
                 <Icon
+                  id={`feature-${key}`}
                   color={theme.palette.text.primary}
                   path={icon}
                   size={12}
@@ -91,11 +93,11 @@ function Home(): ReactElement {
             ({ title, icon }: ModuleDescription, key: number) => (
               <Grid
                 key={key}
-                className={classes.gridItem}
                 item
                 xl={4}
                 md={6}
                 xs={12}
+                sx={{ textAlign: "center" }}
               >
                 <Link
                   href={{
@@ -105,6 +107,7 @@ function Home(): ReactElement {
                 >
                   <CardActionArea>
                     <Icon
+                      id={`feature-${key}`}
                       color={theme.palette.text.primary}
                       path={icon}
                       size={12}
@@ -139,6 +142,7 @@ function Home(): ReactElement {
               >
                 <Grid item>
                   <Icon
+                    id="discussions"
                     color={theme.palette.text.primary}
                     path={mdiForumOutline}
                     size={12}
@@ -150,10 +154,15 @@ function Home(): ReactElement {
                     Discussions
                   </Typography>
                   <Typography
-                    className={classes.gridText}
                     color="textPrimary"
                     component="span"
                     variant="body1"
+                    sx={{
+                      width: 380,
+                      [theme.breakpoints.down("sm")]: {
+                        width: "100%",
+                      },
+                    }}
                   >
                     Participate in discussions and get help here.
                   </Typography>
@@ -176,6 +185,7 @@ function Home(): ReactElement {
               >
                 <Grid item>
                   <Icon
+                    id="issues"
                     color={theme.palette.text.primary}
                     path={mdiNotebookEditOutline}
                     size={12}
@@ -187,10 +197,15 @@ function Home(): ReactElement {
                     Suggest a Feature / Report a Bug
                   </Typography>
                   <Typography
-                    className={classes.gridText}
                     color="textPrimary"
                     component="span"
                     variant="body1"
+                    sx={{
+                      width: 380,
+                      [theme.breakpoints.down("sm")]: {
+                        width: "100%",
+                      },
+                    }}
                   >
                     Thought of a feature that could be added?
                     <br />
@@ -214,6 +229,7 @@ function Home(): ReactElement {
               >
                 <Grid item>
                   <Icon
+                    id="github"
                     color={theme.palette.text.primary}
                     path={mdiGithub}
                     size={12}
@@ -225,10 +241,15 @@ function Home(): ReactElement {
                     Source Code
                   </Typography>
                   <Typography
-                    className={classes.gridText}
                     color="textPrimary"
                     component="span"
                     variant="body1"
+                    sx={{
+                      width: 380,
+                      [theme.breakpoints.down("sm")]: {
+                        width: "100%",
+                      },
+                    }}
                   >
                     The source code for this project is available on GitHub.
                   </Typography>

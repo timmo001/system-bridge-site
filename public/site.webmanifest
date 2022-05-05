@@ -1,7 +1,6 @@
 {
   "name": "System Bridge",
   "short_name": "System Bridge",
-  "start_url": "https://system-bridge.timmo.dev",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

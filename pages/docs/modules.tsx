@@ -21,7 +21,6 @@ import { Icon } from "@mdi/react";
 
 import { ModuleDescription, moduleItems } from "assets/data/modules";
 import Layout from "components/Layout";
-import useStyles from "assets/jss/components/layout";
 import Markdown from "components/Markdown";
 
 interface StyledTabProps {
@@ -67,19 +66,21 @@ function Modules(): ReactElement {
     [currentTab]
   );
 
-  const classes = useStyles();
   const theme = useTheme();
 
   return (
     <>
       <div ref={ref} />
       <Layout
-        classes={classes}
         title="Modules"
         url="https://system-bridge.timmo.dev/docs/modules"
         description="A bridge for your systems."
       >
-        <Container className={classes.main} component="article" maxWidth="lg">
+        <Container
+          component="article"
+          maxWidth="lg"
+          sx={{ position: "relative", marginTop: 48 }}
+        >
           <Typography component="h1" variant="h2">
             Modules
           </Typography>
@@ -93,11 +94,14 @@ function Modules(): ReactElement {
             >
               <Grid item>
                 <TabList
-                  className={classes.verticalTabs}
                   aria-label="Services"
                   orientation="vertical"
                   variant="scrollable"
                   onChange={handleChangeTab}
+                  sx={{
+                    borderRight: `1px solid ${theme.palette.divider}`,
+                    marginTop: 80,
+                  }}
                 >
                   {Object.keys(moduleItems).map((key: string) => (
                     <StyledTab
@@ -105,6 +109,7 @@ function Modules(): ReactElement {
                       label={moduleItems[key].title}
                       icon={
                         <Icon
+                          id={`module-${key}`}
                           color={theme.palette.text.primary}
                           path={moduleItems[key].icon}
                           size={1}
@@ -129,8 +134,9 @@ function Modules(): ReactElement {
                     alignItems="flex-start"
                     justifyContent="space-evenly"
                   >
-                    <Grid className={classes.name} item>
+                    <Grid item sx={{ marginTop: 80 }}>
                       <Icon
+                        id={`module-${currentTab}`}
                         color={theme.palette.text.primary}
                         path={icon}
                         size={12}

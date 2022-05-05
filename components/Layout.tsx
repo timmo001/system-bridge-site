@@ -1,7 +1,6 @@
 import React, { ReactElement } from "react";
 import Head from "next/head";
-import { Container, CardContent, Typography } from "@mui/material";
-import { ClassNameMap } from "@mui/styles";
+import { Container, CardContent, Typography, useTheme } from "@mui/material";
 
 import Header from "./Header";
 import HeaderLinks from "./HeaderLinks";
@@ -9,7 +8,6 @@ import Parallax from "./Parallax";
 
 interface LayoutProps {
   children?: ReactElement | ReactElement[];
-  classes: ClassNameMap;
   description?: string;
   keywords?: string;
   title?: string;
@@ -17,8 +15,7 @@ interface LayoutProps {
 }
 
 function Layout(props: LayoutProps): ReactElement {
-  const classes = props.classes;
-
+  const theme = useTheme();
   return (
     <>
       <Head>
@@ -57,7 +54,11 @@ function Layout(props: LayoutProps): ReactElement {
       />
       <Parallax small image={"/header.svg"} />
       {props.children}
-      <Container className={classes.footer} component="footer" maxWidth="xl">
+      <Container
+        component="footer"
+        maxWidth="xl"
+        sx={{ marginTop: theme.spacing(2) }}
+      >
         <CardContent>
           <Typography component="div" variant="subtitle1">
             Website source available on{" "}

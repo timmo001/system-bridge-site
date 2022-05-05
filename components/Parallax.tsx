@@ -1,21 +1,11 @@
 import React, { ReactElement, useEffect, useState } from "react";
-import clsx from "clsx";
-
-import useStyles from "assets/jss/components/parallax";
 
 interface ParallaxProps {
   children?: ReactElement;
-  filter?: boolean;
   image?: string;
-  small?: boolean;
 }
 
-function Parallax({
-  children,
-  filter,
-  image,
-  small,
-}: ParallaxProps): ReactElement {
+function Parallax({ children, image }: ParallaxProps): ReactElement {
   const [transform, setTransform] = useState<string>();
 
   useEffect(() => {
@@ -39,15 +29,9 @@ function Parallax({
     const windowScrollTop = window.pageYOffset / 3;
     setTransform("translate3d(0," + windowScrollTop + "px,0)");
   };
-  const classes = useStyles();
-  const parallaxClasses = clsx({
-    [classes.parallax]: true,
-    [classes.filter]: filter,
-    [classes.small]: small,
-  });
+
   return (
     <div
-      className={parallaxClasses}
       style={{
         backgroundImage: "url(" + image + ")",
         transform: transform,
