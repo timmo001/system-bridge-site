@@ -50,7 +50,6 @@ function Modules(): ReactElement {
 
   useEffect(() => {
     setCurrentTab(typeof endpoint === "string" ? endpoint : "battery");
-    ref.current.scrollIntoView({ behavior: "smooth" });
   }, [endpoint]);
 
   const ref = useRef(null);
@@ -100,7 +99,6 @@ function Modules(): ReactElement {
                   onChange={handleChangeTab}
                   sx={{
                     borderRight: `1px solid ${theme.palette.divider}`,
-                    marginTop: 80,
                   }}
                 >
                   {Object.keys(moduleItems).map((key: string) => (
@@ -134,7 +132,7 @@ function Modules(): ReactElement {
                     alignItems="flex-start"
                     justifyContent="space-evenly"
                   >
-                    <Grid item sx={{ marginTop: 80 }}>
+                    <Grid item>
                       <Icon
                         id={`module-${currentTab}`}
                         color={theme.palette.text.primary}

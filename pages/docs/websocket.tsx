@@ -50,7 +50,6 @@ function WebSocket(): ReactElement {
 
   useEffect(() => {
     setCurrentTab(typeof id === "string" ? id : "registerListener");
-    ref.current.scrollIntoView({ behavior: "smooth" });
   }, [id]);
 
   const ref = useRef(null);
@@ -70,7 +69,6 @@ function WebSocket(): ReactElement {
 
   return (
     <>
-      <div ref={ref} />
       <Layout
         title="WebSocket"
         url="https://system-bridge.timmo.dev/docs/websocket"
@@ -81,6 +79,7 @@ function WebSocket(): ReactElement {
           maxWidth="lg"
           sx={{ position: "relative", marginTop: 4 }}
         >
+          <div ref={ref} />
           <Typography component="h1" variant="h2">
             WebSocket
           </Typography>
@@ -100,7 +99,6 @@ function WebSocket(): ReactElement {
                   onChange={handleChangeTab}
                   sx={{
                     borderRight: `1px solid ${theme.palette.divider}`,
-                    marginTop: 80,
                   }}
                 >
                   {Object.keys(websocketItems).map((key: string) => (
@@ -134,7 +132,7 @@ function WebSocket(): ReactElement {
                     alignItems="flex-start"
                     justifyContent="space-evenly"
                   >
-                    <Grid item sx={{ marginTop: 80 }}>
+                    <Grid item>
                       <Icon
                         id={`websocket-${currentTab}`}
                         color={theme.palette.text.primary}
