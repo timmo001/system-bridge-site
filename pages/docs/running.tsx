@@ -16,7 +16,7 @@ function Running(): ReactElement {
         <Container
           component="article"
           maxWidth="lg"
-          sx={{ position: "relative", marginTop: 48 }}
+          sx={{ position: "relative", marginTop: 8 }}
         >
           <Typography component="h1" variant="h2">
             Running

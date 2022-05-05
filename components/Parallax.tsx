@@ -34,6 +34,9 @@ function Parallax({ children, image }: ParallaxProps): ReactElement {
     <div
       style={{
         backgroundImage: "url(" + image + ")",
+        backgroundPosition: "center center",
+        backgroundSize: "cover",
+        height: 380,
         transform: transform,
       }}
     >

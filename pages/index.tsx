@@ -32,7 +32,7 @@ function Home(): ReactElement {
       <Container
         component="article"
         maxWidth="lg"
-        sx={{ position: "relative", marginTop: 48 }}
+        sx={{ position: "relative", marginTop: 8 }}
       >
         <Typography color="textPrimary" component="h2" variant="h2">
           A bridge for your systems
