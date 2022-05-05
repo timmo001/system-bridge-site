@@ -1,12 +1,12 @@
 import React, { ReactElement, useMemo } from "react";
 import { ReactMarkdownProps } from "react-markdown/lib/ast-to-react";
-import Highlight from "react-highlight";
-
-import "highlight.js/styles/atom-one-dark.css";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 function Code({
   className,
   children,
+  inline,
 }: JSX.IntrinsicElements["code"] &
   ReactMarkdownProps & {
     inline?: boolean;
@@ -20,7 +20,16 @@ function Code({
     []
   );
 
-  return <Highlight className={language}>{code}</Highlight>;
+  return (
+    <SyntaxHighlighter
+      style={atomOneDark}
+      customStyle={
+        inline && !language ? { display: "inline", padding: "0.2em" } : {}
+      }
+      language={language || "text"}
+      children={code}
+    />
+  );
 }
 
 export default Code;
