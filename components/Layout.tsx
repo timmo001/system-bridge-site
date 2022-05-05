@@ -42,17 +42,8 @@ function Layout(props: LayoutProps): ReactElement {
           }
         />
       </Head>
-      <Header
-        {...props}
-        changeColorOnScroll={{
-          height: 24,
-          color: "primary",
-        }}
-        color="transparent"
-        fixed
-        rightLinks={<HeaderLinks />}
-      />
-      <Parallax small image={"/header.svg"} />
+      <Header rightLinks={<HeaderLinks />} />
+      <Parallax image={"/header.svg"} />
       {props.children}
       <Container
         component="footer"
