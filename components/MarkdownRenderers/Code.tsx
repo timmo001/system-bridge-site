@@ -24,7 +24,9 @@ function Code({
     <SyntaxHighlighter
       style={atomOneDark}
       customStyle={
-        inline && !language ? { display: "inline", padding: "0.2em" } : {}
+        inline && !language
+          ? { display: "inline", padding: "0.2em" }
+          : undefined
       }
       language={language || "text"}
       children={code}

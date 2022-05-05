@@ -20,5 +20,7 @@ The avaliable base directories are:
 ## Response
 
 ```json
-{}
+{
+    "foo": "bar"
+}
 ```
