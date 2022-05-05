@@ -51,6 +51,8 @@ let theme = createTheme({
       styleOverrides: {
         h2: {
           textAlign: "center",
+          marginTop: 16,
+          marginBottom: 32,
         },
         h3: {
           marginTop: 64,
