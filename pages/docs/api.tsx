@@ -50,7 +50,6 @@ function API(): ReactElement {
 
   useEffect(() => {
     setCurrentTab(typeof id === "string" ? id : "data");
-    ref.current.scrollIntoView({ behavior: "smooth" });
   }, [id]);
 
   const ref = useRef(null);
@@ -70,7 +69,6 @@ function API(): ReactElement {
 
   return (
     <>
-      <div ref={ref} />
       <Layout
         title="API"
         url="https://system-bridge.timmo.dev/docs/api"
@@ -81,6 +79,7 @@ function API(): ReactElement {
           maxWidth="lg"
           sx={{ position: "relative", marginTop: 4 }}
         >
+          <div ref={ref} />
           <Typography component="h1" variant="h2">
             API
           </Typography>
@@ -100,7 +99,6 @@ function API(): ReactElement {
                   onChange={handleChangeTab}
                   sx={{
                     borderRight: `1px solid ${theme.palette.divider}`,
-                    marginTop: 80,
                   }}
                 >
                   {Object.keys(apiItems).map((key: string) => (
@@ -134,7 +132,7 @@ function API(): ReactElement {
                     alignItems="flex-start"
                     justifyContent="space-evenly"
                   >
-                    <Grid item sx={{ marginTop: 80 }}>
+                    <Grid item>
                       <Icon
                         id={`api-${currentTab}`}
                         color={theme.palette.text.primary}
