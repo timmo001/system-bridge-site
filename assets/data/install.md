@@ -60,6 +60,8 @@ python -m pip install --upgrade systembridgewindowssensors
 
 For a headless setup, you can just install the backend, cli, and shared packages.
 
+You may need to generate your `~/.config/user-dirs.dirs` using the `xdg-user-dirs-update` command. See [here](https://wiki.archlinux.org/title/XDG_user_directories) for more info.
+
 ```bash
 python -m pip install --upgrade systembridgeshared systembridgebackend systembridgecli
 ```
