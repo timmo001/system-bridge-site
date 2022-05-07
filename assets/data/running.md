@@ -24,7 +24,7 @@ python -m systembridgebackend --no-gui
 
 #### Systemd Service
 
-Here is an example systemd service. Note this runs as root, so you will need to have run the install commands as root for this to run.
+Here is an example systemd service. This runs as root, so you will need to have run the install commands as root for this to run.
 
 ```bash
 [Unit]
