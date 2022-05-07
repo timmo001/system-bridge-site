@@ -14,12 +14,30 @@ You should now find a shortcut in your start menu / applications called `System 
 
 To enable autostart, open settings via the system tray icon, enable autostart and click the save icon. The application will now be added to startup.
 
-### No GUI
+### No GUI / Headless
 
 If you want to run the application without a GUI, you can use the following command:
 
 ```bash
 python -m systembridgebackend --no-gui
+```
+
+#### Systemd Service
+
+Here is an example systemd service. Note this runs as root, so you will need to have run the install commands as root for this to run.
+
+```bash
+[Unit]
+Description=System Bridge
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -m systembridgebackend --no-gui
+Restart=on-abort
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 ## CLI
