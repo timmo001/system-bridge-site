@@ -30,7 +30,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "17.0.31",
-    "@types/react": "17.0.42",
+    "@types/react": "18.0.9",
     "@types/react-syntax-highlighter": "15.5.1",
     "@typescript-eslint/eslint-plugin": "5.22.0",
     "@typescript-eslint/parser": "5.22.0",
