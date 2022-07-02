@@ -7,7 +7,7 @@ See below for the full installation instructions. For a more detailed guide foll
 Install [Python 3](https://www.python.org/downloads) including pip in the setup.
 
 ```bash
-python -m pip install --upgrade pywin32 systembridgeshared systembridgebackend systembridgecli systembridgefrontend systembridgegui systembridgewindowssensors
+python -m pip install --upgrade systembridgeshared systembridgebackend systembridgecli systembridgefrontend systembridgegui systembridgewindowssensors
 ```
 
 ### Linux
@@ -31,14 +31,6 @@ You will need these packages:
 
 - `lshw`: Gets system information such as the UUID.
 - `upower`: (Optional) Gets battery information.
-
-#### Windows
-
-Windows requires the `pywin32` python package. Install it by running:
-
-```bash
-python -m pip install pywin32
-```
 
 ### Install
 
