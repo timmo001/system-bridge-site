@@ -6,6 +6,10 @@ You can get your API key using the [CLI](https://system-bridge.timmo.dev/docs/cl
 
 You can access logs via the system tray icon or via the [CLI](https://system-bridge.timmo.dev/docs/cli).
 
+## Home Assistant Cannot Connect / Times out when connecting
+
+Make sure you allow python (and pythonw on Windows) through your firewall. On Windows, the firewall prompt sometimes doesnt appear.
+
 ## I'd like to contribute to the project
 
 There are many ways to contribute to this project. You don't have to
