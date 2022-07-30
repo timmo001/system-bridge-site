@@ -1,7 +1,7 @@
-module.exports = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
   webpack: (config) => {
     return Object.assign({}, config, {
       module: Object.assign({}, config.module, {
@@ -22,3 +22,5 @@ module.exports = {
     });
   },
 };
+
+module.exports = nextConfig;
