@@ -131,6 +131,7 @@ function Home(): ReactElement {
         <a
           href="https://github.com/timmo001/system-bridge/discussions"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <CardContent>
             <CardActionArea>
@@ -174,6 +175,7 @@ function Home(): ReactElement {
         <a
           href="https://github.com/timmo001/system-bridge/issues"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <CardContent>
             <CardActionArea>
@@ -218,7 +220,11 @@ function Home(): ReactElement {
             </CardActionArea>
           </CardContent>
         </a>
-        <a href="https://github.com/timmo001/system-bridge" target="_blank">
+        <a
+          href="https://github.com/timmo001/system-bridge"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <CardContent>
             <CardActionArea>
               <Grid

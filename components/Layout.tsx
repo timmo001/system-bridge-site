@@ -56,13 +56,18 @@ function Layout(props: LayoutProps): ReactElement {
             <a
               href="https://github.com/timmo001/system-bridge-site"
               target="_blank"
+              rel="noopener noreferrer"
             >
               GitHub
             </a>
             .
             <br />
             Copyright ©{" "}
-            <a href="https://timmo.dev" target="_blank">
+            <a
+              href="https://timmo.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Aidan Timson
             </a>
           </Typography>

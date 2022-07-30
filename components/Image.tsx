@@ -39,6 +39,7 @@ function Image({
       >
         <Card sx={{ width: "100%" }} elevation={hidePaper ? 0 : 1}>
           {showAsImage ? (
+            // eslint-disable-next-line @next/next/no-img-element
             <img src={media.url} alt={media.alternativeText} />
           ) : (
             <CardMedia
@@ -80,6 +81,7 @@ function Image({
               ) : (
                 ""
               )}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={media.url} alt={media.alternativeText} />
             </DialogContent>
           </Fragment>
