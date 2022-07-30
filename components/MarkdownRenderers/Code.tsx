@@ -17,7 +17,7 @@ function Code({
   );
   const language = useMemo<string>(
     () => className?.replace("language-", ""),
-    []
+    [className]
   );
 
   return (
@@ -29,6 +29,7 @@ function Code({
           : undefined
       }
       language={language || "text"}
+      // eslint-disable-next-line react/no-children-prop
       children={code}
     />
   );
