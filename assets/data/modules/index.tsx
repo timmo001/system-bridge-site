@@ -34,11 +34,6 @@ export const moduleItems: GenericObject<ModuleDescription> = {
     icon: mdiBatteryCharging,
     docs: mdBattery,
   },
-  bridge: {
-    title: "Bridges",
-    icon: mdiBatteryCharging,
-    docs: mdBridge,
-  },
   cpu: {
     title: "CPU",
     icon: mdiCpu64Bit,
