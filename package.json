@@ -16,7 +16,7 @@
     "@mdi/react": "1.6.1",
     "@mui/icons-material": "5.8.4",
     "@mui/lab": "5.0.0-alpha.94",
-    "@mui/material": "5.9.3",
+    "@mui/material": "5.10.0",
     "@mui/styles": "5.9.3",
     "clsx": "1.2.1",
     "moment": "2.29.4",
