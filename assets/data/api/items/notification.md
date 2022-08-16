@@ -18,6 +18,6 @@ POST /api/notification
 
 ```json
 {
-    "message": "Notification sent",
+    "message": "Notification sent"
 }
 ```
