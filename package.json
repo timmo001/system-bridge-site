@@ -9,7 +9,7 @@
     "start": "next start -p 3020"
   },
   "dependencies": {
-    "@emotion/react": "11.10.0",
+    "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.0",
     "@fontsource/roboto": "4.5.8",
     "@mdi/js": "7.0.96",
@@ -17,7 +17,7 @@
     "@mui/icons-material": "5.10.2",
     "@mui/lab": "5.0.0-alpha.96",
     "@mui/material": "5.10.2",
-    "@mui/styles": "5.10.2",
+    "@mui/styles": "5.10.3",
     "clsx": "1.2.1",
     "moment": "2.29.4",
     "next": "12.2.5",
@@ -34,7 +34,7 @@
     "@types/react-dom": "18.0.6",
     "@types/react-syntax-highlighter": "15.5.5",
     "@typescript-eslint/eslint-plugin": "5.35.1",
-    "@typescript-eslint/parser": "5.35.1",
+    "@typescript-eslint/parser": "5.36.0",
     "emit-file-loader": "0.0.2",
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5",
