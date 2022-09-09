@@ -37,7 +37,7 @@
     "@typescript-eslint/parser": "5.36.2",
     "emit-file-loader": "0.0.2",
     "eslint": "8.23.0",
-    "eslint-config-next": "12.2.5",
+    "eslint-config-next": "12.3.0",
     "eslint-import-resolver-typescript": "3.5.1",
     "eslint-plugin-import": "2.26.0",
     "prettier": "2.7.1",
